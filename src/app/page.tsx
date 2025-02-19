@@ -5,14 +5,14 @@ import logo from "@/public/logo.svg";
 export default function Home() {
 	return (
 	<div>
-		<header>
-		<a className={"relative my-2 shrink-0"} href="https://www.investujdopole.cz/"><Image src={logo} alt="Investuj do pole" width={150} height={50} /></a>
+		<header className={"p-6 flex justify-between items-center"}>
+		<a href="https://www.investujdopole.cz/"><Image src={logo} alt="Logo Investuj do pole" width={150} height={50} /></a>
 			<nav>
-				<ul>
-					<li>Vyjímečný pozemek</li>
-					<li>O nás</li>
-					<li>Reference</li>
-					<li>Kontakt</li>
+				<ul className={"flex gap-12"}>
+					<li><a href="">Vyjímečný pozemek</a></li>
+					<li><a href="">O nás</a></li>
+					<li><a href="">Reference</a></li>
+					<li><a href="">Kontakt</a></li>
 				</ul>
 			</nav>
 			<Btn text="Chci poslední pozemek"/>
