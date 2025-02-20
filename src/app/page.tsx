@@ -2,6 +2,9 @@ import Btn from "../components/Btn";
 import Image from "next/image";
 import Logo from "@/public/logo.svg";
 import LogoLight from "@/public/logo--white.svg";
+import Arrow from "@/public/icon-arrow.svg";
+import Graph from "@/public/graph.svg";
+import Rating from "@/public/rating-stars.svg";
 
 
 
@@ -30,161 +33,84 @@ export default function Home() {
 			<Btn text="Chci poslední pozemek" iconPosition="left" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />}  />
 		</section>
 
-		<section className="max-w-[1200px] self-center rounded-2xl">
+		<section data-layer="Video" className="Video max-w-[1200px] self-center rounded-2xl">
 			<div className="bg-[#b4d6a5] w-[1200px] rounded-2xl h-[679px]">{/*TODO VIDEO*/}</div>
 		</section>
-{/*
-			<h1 className="text-4xl font-bold text-center py-4">
-				Poslední perla trojských pozemků.
-			</h1>
-			<p>Objevte jedinečnou příležitost vlastnit poslední pozemek této velikosti a exkluzivity v Praze-Troji.</p>
-			<Btn text="Chci poslední pozemek" />
 
-			video
-notosans
-*/}
+		<section data-layer="Social proof" className="SocialProof max-w-[1200px] self-center grid grid-cols-[1fr_1.4fr_1fr] items-center grid-rows-[auto_1fr_auto] gap-8">
+			<div className="p-10 bg-white rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)] flex-col justify-center items-center gap-7 self-center flex">
+				<div className="justify-start items-start gap-10 inline-flex">
+				<div className="flex-col justify-start items-center gap-1.5 inline-flex">
+					<div><span className="text-[#2c2758] text-4xl font-black">20</span><span className="text-[#8cb679] text-4xl font-black font-['Noto Sans'] leading-10">+</span></div>
+					<div className="text-[#636363] text-sm font-normal">Let zkušeností</div>
+				</div>
+				</div>
+				<div className="justify-start items-start gap-10 inline-flex">
+				<div className="flex-col justify-start items-center gap-1.5 inline-flex">
+					<div><span className="text-[#2c2758] text-4xl font-black">Top </span><span className="text-[#8cb679] text-4xl font-black font-['Noto Sans'] leading-10">9</span></div>
+					<div className="text-[#636363] text-sm font-normal">Realitní kancelář</div>
+				</div>
+				</div>
+				<div className="justify-start items-start gap-10 inline-flex">
+				<div className="flex-col justify-start items-center gap-1 inline-flex">
+					<div><span className="text-[#2c2758] text-4xl font-black">5000</span><span className="text-[#8cb679] text-4xl font-black font-['Noto Sans'] leading-10">+</span></div>
+					<div className="text-[#636363] text-sm font-normal">Prodaných pozemků</div>
+				</div>
+				</div>
+				<a href="" className="p-1.5 justify-center items-center gap-2.5 inline-flex">
+					<div className="text-[#2c2758] text-sm font-normal">Více o Investuj do pole</div>
+					<Image src={Arrow} alt="" height={18} />
+				</a>
+			</div>
+			<div className="p-12 bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-2xl shadow-[12.955601692199707px_5.182241439819336px_51.82240676879883px_0px_rgba(0,0,0,0.16)] flex-col justify-center items-center gap-4 flex row-span-2">
+				<div className="justify-center items-center gap-4 inline-flex">
+				{/*TODO slider*/}
+				<a href=""><Image src={Arrow} alt="" height={18} className="rotate-180" /></a>
 
+				{/*TODO people*/}
+				<div className="w-44 h-24 relative">
+					<div className="w-44 h-12 left-0 top-[25.80px] absolute">
+						<img className="w-14 h-12 left-0 top-0 absolute rounded-full shadow-[0px_5.182241439819336px_5.182241439819336px_0px_rgba(0,0,0,0.08)] border-2 border-white" src="https://placehold.co/52x52" />
+						<img className="w-14 h-12 left-[122.28px] top-0 absolute rounded-full shadow-[0px_5.182241439819336px_5.182241439819336px_0px_rgba(0,0,0,0.08)] border-2 border-white" src="https://placehold.co/52x52" />
+					</div>
+					<img className="w-24 h-24 left-[35.12px] top-[-0px] absolute rounded-full shadow-[0px_10.346345901489258px_10.346345901489258px_0px_rgba(0,0,0,0.08)] border-2 border-white" src="https://placehold.co/104x103" />
+				</div>
 
-{/*
-			<div className="justify-center items-center gap-8 flex">
-  <div className="w-full p-10 bg-white rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)] flex-col justify-center items-center gap-7 inline-flex">
-    <div className="justify-start items-start gap-10 inline-flex">
-      <div className="flex-col justify-start items-center gap-1.5 inline-flex">
-        <div><span class="text-[#2c2758] text-4xl font-normal font-['Gilroy-Black'] leading-10">20</span><span class="text-[#8cb679] text-4xl font-normal font-['Gilroy-Black'] leading-10">+</span></div>
-        <div className="text-[#636363] text-sm font-normal font-['Gilroy-Regular'] leading-3">Let zkušeností</div>
-      </div>
-    </div>
-    <div className="justify-start items-start gap-10 inline-flex">
-      <div className="flex-col justify-start items-center gap-1.5 inline-flex">
-        <div><span class="text-[#2c2758] text-4xl font-normal font-['Gilroy-Black'] leading-10">Top </span><span class="text-[#8cb679] text-4xl font-normal font-['Gilroy-Black'] leading-10">9</span></div>
-        <div className="text-[#636363] text-sm font-normal font-['Gilroy-Regular'] leading-3">Realitní kancelář</div>
-      </div>
-    </div>
-    <div className="justify-start items-start gap-10 inline-flex">
-      <div className="flex-col justify-start items-center gap-1 inline-flex">
-        <div><span class="text-[#2c2758] text-4xl font-normal font-['Gilroy-Black'] leading-10">5000</span><span class="text-[#8cb679] text-4xl font-normal font-['Gilroy-Black'] leading-10">+</span></div>
-        <div className="text-[#636363] text-sm font-normal font-['Gilroy-Regular'] leading-3">Prodaných pozemků</div>
-      </div>
-    </div>
-    <div className="p-1.5 justify-center items-center gap-2.5 inline-flex">
-      <div className="text-[#2c2758] text-sm font-normal font-['Gilroy-Bold'] leading-tight">Více o Investuj do pole</div>
-      <div data-svg-wrapper className="relative">
-      <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_1277_4751)">
-      <path d="M1.76788 9.07404H15.7669" stroke="#B4D6A5" stroke-width="1.59364" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M8.76715 2.0744L15.7667 9.07392L8.76715 16.0734" stroke="#B4D6A5" stroke-width="1.59364" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-      <defs>
-      <clipPath id="clip0_1277_4751">
-      <rect width="15.9989" height="16.9988" fill="white" transform="translate(0.767822 0.330872)"/>
-      </clipPath>
-      </defs>
-      </svg>
-      </div>
-    </div>
-  </div>
-  <div className="w-96 p-12 bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-2xl shadow-[12.955601692199707px_5.182241439819336px_51.82240676879883px_0px_rgba(0,0,0,0.16)] flex-col justify-center items-center gap-4 inline-flex">
-    <div className="justify-center items-center gap-4 inline-flex">
-      <div data-svg-wrapper className="relative">
-      <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_1278_4813)">
-      <path d="M17.2178 10.0681L1.51382 10.0681" stroke="#B4D6A5" stroke-width="1.78773" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M9.36627 17.9201L1.51427 10.0681L9.36627 2.21609" stroke="#B4D6A5" stroke-width="1.78773" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-      <defs>
-      <clipPath id="clip0_1278_4813">
-      <rect width="17.9474" height="19.0692" fill="white" transform="translate(18.3398 19.876) rotate(-180)"/>
-      </clipPath>
-      </defs>
-      </svg>
-      </div>
-      <div className="w-44 h-24 relative">
-        <div className="w-44 h-12 left-0 top-[25.80px] absolute">
-          <img className="w-14 h-12 left-0 top-0 absolute rounded-full shadow-[0px_5.182241439819336px_5.182241439819336px_0px_rgba(0,0,0,0.08)] border-2 border-white" src="https://placehold.co/52x52" />
-          <img className="w-14 h-12 left-[122.28px] top-0 absolute rounded-full shadow-[0px_5.182241439819336px_5.182241439819336px_0px_rgba(0,0,0,0.08)] border-2 border-white" src="https://placehold.co/52x52" />
-        </div>
-        <img className="w-24 h-24 left-[35.12px] top-[-0px] absolute rounded-full shadow-[0px_10.346345901489258px_10.346345901489258px_0px_rgba(0,0,0,0.08)] border-2 border-white" src="https://placehold.co/104x103" />
-      </div>
-      <div data-svg-wrapper className="relative">
-      <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_1278_4807)">
-      <path d="M1.7821 10.6149H17.4861" stroke="#B4D6A5" stroke-width="1.78773" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M9.63367 2.76282L17.4857 10.6148L9.63367 18.4668" stroke="#B4D6A5" stroke-width="1.78773" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-      <defs>
-      <clipPath id="clip0_1278_4807">
-      <rect width="17.9474" height="19.0692" fill="white" transform="translate(0.660156 0.806885)"/>
-      </clipPath>
-      </defs>
-      </svg>
-      </div>
-    </div>
-    <div className="text-white text-2xl font-normal font-['Gilroy-Bold'] leading-relaxed">Dagmar</div>
-    <div className="self-stretch text-center text-white text-base font-normal font-['Gilroy-Regular'] leading-normal">Spolupráce s Investujdopole.cz byla pro mě příjemnou a profesionální zkušeností. Oceňuji především jejich lidský přístup, férové jednání a schopnost srozumitelně vysvětlit celý proces obchodu s pozemky.</div>
-    <div className="justify-center items-center gap-4 inline-flex">
-      <div><span class="text-white text-xl font-normal font-['Gilroy-Bold'] leading-relaxed">4.5</span><span class="text-[#b4d6a5] text-xs font-normal font-['Gilroy-Bold'] leading-relaxed">/5.0 hodnocení</span></div>
-      <div data-svg-wrapper>
-      <svg width="92" height="19" viewBox="0 0 92 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8.89945 2.33139C9.09327 1.73487 9.93718 1.73487 10.131 2.33139L11.405 6.25227C11.4917 6.51904 11.7403 6.69966 12.0208 6.69966H16.1434C16.7706 6.69966 17.0314 7.50227 16.524 7.87094L13.1887 10.2942C12.9618 10.4591 12.8668 10.7513 12.9535 11.0181L14.2275 14.939C14.4213 15.5355 13.7385 16.0315 13.2311 15.6629L9.8958 13.2396C9.66887 13.0747 9.36158 13.0747 9.13465 13.2396L5.79935 15.6628C5.29192 16.0315 4.60918 15.5355 4.803 14.939L6.07697 11.0181C6.16365 10.7513 6.0687 10.4591 5.84177 10.2942L2.50646 7.87094C1.99903 7.50227 2.25982 6.69966 2.88703 6.69966H7.0097C7.2902 6.69966 7.5388 6.51905 7.62548 6.25227L8.89945 2.33139Z" fill="white"/>
-      <path d="M27.0285 2.33139C27.2223 1.73487 28.0662 1.73487 28.26 2.33139L29.534 6.25227C29.6207 6.51904 29.8693 6.69966 30.1498 6.69966H34.2725C34.8997 6.69966 35.1604 7.50227 34.653 7.87094L31.3177 10.2942C31.0908 10.4591 30.9958 10.7513 31.0825 11.0181L32.3565 14.939C32.5503 15.5355 31.8676 16.0315 31.3601 15.6629L28.0248 13.2396C27.7979 13.0747 27.4906 13.0747 27.2637 13.2396L23.9284 15.6628C23.421 16.0315 22.7382 15.5355 22.932 14.939L24.206 11.0181C24.2927 10.7513 24.1977 10.4591 23.9708 10.2942L20.6355 7.87094C20.1281 7.50227 20.3888 6.69966 21.0161 6.69966H25.1387C25.4192 6.69966 25.6678 6.51905 25.7545 6.25227L27.0285 2.33139Z" fill="white"/>
-      <path d="M45.1576 2.33139C45.3514 1.73487 46.1954 1.73487 46.3892 2.33139L47.6632 6.25227C47.7498 6.51904 47.9984 6.69966 48.2789 6.69966H52.4016C53.0288 6.69966 53.2896 7.50227 52.7822 7.87094L49.4469 10.2942C49.2199 10.4591 49.125 10.7513 49.2117 11.0181L50.4856 14.939C50.6795 15.5355 49.9967 16.0315 49.4893 15.6629L46.154 13.2396C45.927 13.0747 45.6198 13.0747 45.3928 13.2396L42.0575 15.6628C41.5501 16.0315 40.8674 15.5355 41.0612 14.939L42.3352 11.0181C42.4218 10.7513 42.3269 10.4591 42.0999 10.2942L38.7646 7.87094C38.2572 7.50227 38.518 6.69966 39.1452 6.69966H43.2679C43.5484 6.69966 43.797 6.51905 43.8837 6.25227L45.1576 2.33139Z" fill="white"/>
-      <path d="M63.2867 2.33139C63.4805 1.73487 64.3244 1.73487 64.5182 2.33139L65.7922 6.25227C65.8789 6.51904 66.1275 6.69966 66.408 6.69966H70.5306C71.1578 6.69966 71.4186 7.50227 70.9112 7.87094L67.5759 10.2942C67.349 10.4591 67.254 10.7513 67.3407 11.0181L68.6147 14.939C68.8085 15.5355 68.1257 16.0315 67.6183 15.6629L64.283 13.2396C64.0561 13.0747 63.7488 13.0747 63.5219 13.2396L60.1866 15.6628C59.6791 16.0315 58.9964 15.5355 59.1902 14.939L60.4642 11.0181C60.5509 10.7513 60.4559 10.4591 60.229 10.2942L56.8937 7.87094C56.3862 7.50227 56.647 6.69966 57.2742 6.69966H61.3969C61.6774 6.69966 61.926 6.51905 62.0127 6.25227L63.2867 2.33139Z" fill="white"/>
-      <path d="M81.4158 2.33139C81.6096 1.73487 82.4535 1.73487 82.6474 2.33139L83.9213 6.25227C84.008 6.51904 84.2566 6.69966 84.5371 6.69966H88.6598C89.287 6.69966 89.5478 7.50227 89.0403 7.87094L85.705 10.2942C85.4781 10.4591 85.3832 10.7513 85.4698 11.0181L86.7438 14.939C86.9376 15.5355 86.2549 16.0315 85.7475 15.6629L82.4122 13.2396C82.1852 13.0747 81.8779 13.0747 81.651 13.2396L78.3157 15.6628C77.8083 16.0315 77.1255 15.5355 77.3194 14.939L78.5933 11.0181C78.68 10.7513 78.5851 10.4591 78.3581 10.2942L75.0228 7.87094C74.5154 7.50227 74.7762 6.69966 75.4034 6.69966H79.5261C79.8066 6.69966 80.0552 6.51905 80.1418 6.25227L81.4158 2.33139Z" fill="white"/>
-      </svg>
-      </div>
-    </div>
-    <div className="p-1.5 justify-center items-center gap-2.5 inline-flex">
-      <div className="text-white text-sm font-normal font-['Gilroy-Bold'] leading-tight">Zobrazit všechny recenze</div>
-      <div data-svg-wrapper className="relative">
-      <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_1278_4757)">
-      <path d="M1.91553 10.28H17.6195" stroke="#B4D6A5" stroke-width="1.78773" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M9.76709 2.42798L17.6191 10.28L9.76709 18.132" stroke="#B4D6A5" stroke-width="1.78773" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-      <defs>
-      <clipPath id="clip0_1278_4757">
-      <rect width="17.9474" height="19.0692" fill="white" transform="translate(0.793579 0.472046)"/>
-      </clipPath>
-      </defs>
-      </svg>
-      </div>
-    </div>
-  </div>
-  <div className="w-80 p-10 bg-white rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)] flex-col justify-center items-center gap-8 inline-flex">
-    <div className="w-64 justify-center items-center gap-3.5 inline-flex">
-      <div className="w-56 text-center text-[#2c2758] text-xl font-normal font-['Gilroy-Bold'] leading-none">Vývoj ceny pozemků</div>
-    </div>
-    graf svg
-
-    <div className="justify-start items-start gap-6 inline-flex">
-      <div className="flex-col justify-start items-center gap-1 inline-flex">
-        <div className="text-[#2c2758] text-3xl font-extrabold font-['Manrope'] leading-7">+50.4 %</div>
-        <div className="text-[#636363] text-xs font-medium font-['Manrope'] leading-3">Nárůst ceny</div>
-      </div>
-      <div className="flex-col justify-start items-center gap-1 inline-flex">
-        <div className="text-[#2c2758] text-3xl font-extrabold font-['Manrope'] leading-7">5 let</div>
-        <div className="text-[#636363] text-xs font-medium font-['Manrope'] leading-3">za období</div>
-      </div>
-    </div>
-    <div className="p-1.5 justify-center items-center gap-2.5 inline-flex">
-      <div className="text-[#2c2758] text-sm font-normal font-['Gilroy-Bold'] leading-tight">Bližší informace</div>
-      <div data-svg-wrapper className="relative">
-      <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_1278_4796)">
-      <path d="M1.41553 10.0511H17.1195" stroke="#B4D6A5" stroke-width="1.78773" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M9.26709 2.19904L17.1191 10.051L9.26709 17.903" stroke="#B4D6A5" stroke-width="1.78773" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-      <defs>
-      <clipPath id="clip0_1278_4796">
-      <rect width="17.9474" height="19.0692" fill="white" transform="translate(0.293579 0.243164)"/>
-      </clipPath>
-      </defs>
-      </svg>
-      </div>
-    </div>
-  </div>
-</div>
-*/}
+				<a href=""><Image src={Arrow} alt="" height={18} /></a>
+				</div>
+				<div className="text-white text-2xl">Dagmar</div>
+				<div className="self-stretch text-center text-white text-base">Spolupráce s Investujdopole.cz byla pro mě příjemnou a profesionální zkušeností. Oceňuji především jejich lidský přístup, férové jednání a schopnost srozumitelně vysvětlit celý proces obchodu s pozemky.</div>
+				<div className="justify-center items-center gap-4 inline-flex">
+				<div><span className="text-white text-xl">4.5</span><span className="text-[#b4d6a5] text-xs font-normal">/5.0 hodnocení</span></div>
+				<Image src={Rating} alt="" />
+				</div>
+				<a href="" className="p-1.5 justify-center items-center gap-2.5 inline-flex">
+					<div className="text-white text-sm font-normal">Zobrazit všechny recenze</div>
+					<Image src={Arrow} alt="" height={18} />
+				</a>
+			</div>
+			<div className="p-10 bg-white rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)] flex-col justify-center items-center gap-8 self-center flex">
+				<div className="justify-center items-center gap-3.5 inline-flex">
+				<div className="text-center text-[#2c2758] text-xl font-normal">Vývoj ceny pozemků</div>
+				</div>
+				{/*TODO graf*/}
+				<Image src={Graph} alt=""/>
+				<div className="justify-start items-start gap-6 inline-flex">
+				<div className="flex-col justify-start items-center gap-1 inline-flex">
+					<div className="text-[#2c2758] text-3xl font-extrabold">+50.4 %</div>
+					<div className="text-[#636363] text-xs font-medium">Nárůst ceny</div>
+				</div>
+				<div className="flex-col justify-start items-center gap-1 inline-flex">
+					<div className="text-[#2c2758] text-3xl font-extrabold">5 let</div>
+					<div className="text-[#636363] text-xs font-medium">za období</div>
+				</div>
+				</div>
+				<a href="" className="p-1.5 justify-center items-center gap-2.5 inline-flex">
+					<div className="text-[#2c2758] text-sm font-normal ">Bližší informace</div>
+					<Image src={Arrow} alt="" height={18} />
+				</a>
+			</div>
+		</section>
 			investment-highlights 3 containers
 			Nepropásněte
 			<section className="p-12 bg-indigo-950 rounded-xl text-white m-auto w-full max-w-3xl">
