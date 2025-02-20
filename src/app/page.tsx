@@ -22,10 +22,10 @@ export default function Home() {
 
 		</header>
 
-		<section data-layer="Hero Container" className="HeroContainer max-w-[1200px] flex-col justify-start items-center gap-9 inline-flex">
+		<section data-layer="Hero Container" className="HeroContainer max-w-[1200px] flex-col self-center justify-start items-center gap-9 inline-flex">
 			<div className="self-stretch flex-col justify-start items-center gap-6 flex">
-				<div className="self-stretch text-center"><span className="text-[#2c2758] text-7xl font-bold leading-10">Poslední perla <br/>trojských pozemků</span><span className="text-[#8cb679] text-7xl font-bold font-['Roboto'] leading-10">.</span></div>
-				<div className="text-center text-[#757575] text-2xl font-normal leading-10">Objevte jedinečnou příležitost vlastnit poslední pozemek<br/> této velikosti a exkluzivity v Praze-Troji.</div>
+				<div className="self-stretch text-center"><span className="text-[#2c2758] text-7xl font-bold">Poslední perla <br/>trojských pozemků</span><span className="text-[#8cb679] text-7xl font-bold font-['Roboto'] leading-10">.</span></div>
+				<div className="text-center text-[#757575] text-2xl font-normal0">Objevte jedinečnou příležitost vlastnit poslední pozemek<br/> této velikosti a exkluzivity v Praze-Troji.</div>
 			</div>
 			<Btn text="Chci poslední pozemek" iconPosition="left" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />}  />
 		</section>
