@@ -1,18 +1,24 @@
 import React from "react";
 
-type BtnProps = {
+interface BtnProps {
   text: string;
-  onClick?: () => void;
-};
+  icon?: React.ReactNode;
+  iconPosition?: "left" | "right";
+}
 
-const Btn: React.FC<BtnProps> = ({ text, onClick }) => {
+const Btn: React.FC<BtnProps> = ({ text, icon, iconPosition = "right" }) => {
   return (
-    <button
-      onClick={onClick}
-      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 bg-indigo-950"
-    >
-      {text}
-    </button>
+    <div className="justify-start items-center gap-6 inline-flex">
+      <div className="justify-start items-center gap-6 flex">
+        <button
+          className="px-6 py-4 bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-3xl justify-center items-center gap-2.5 flex"
+        >
+          {icon && iconPosition === "left" && <div className="relative">{icon}</div>}
+          <span className="text-white text-lg font-normal">{text}</span>
+          {icon && iconPosition === "right" && <div className="relative">{icon}</div>}
+        </button>
+      </div>
+    </div>
   );
 };
 
