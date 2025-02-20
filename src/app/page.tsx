@@ -29,6 +29,10 @@ export default function Home() {
 			</div>
 			<Btn text="Chci poslední pozemek" iconPosition="left" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />}  />
 		</section>
+
+		<section className="max-w-[1200px] self-center rounded-2xl">
+			<div className="bg-[#b4d6a5] w-[1200px] rounded-2xl h-[679px]">{/*TODO VIDEO*/}</div>
+		</section>
 {/*
 			<h1 className="text-4xl font-bold text-center py-4">
 				Poslední perla trojských pozemků.
