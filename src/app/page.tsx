@@ -7,6 +7,8 @@ import Tick from "@/public/icon-tick.svg";
 import Mail from "@/public/icon-mail.svg";
 import Phone from "@/public/icon-phone.svg";
 import Web from "@/public/icon-web.svg";
+import Cursor from "@/public/icon-cursor.svg";
+import Location from "@/public/icon-location.svg";
 import Facebook from "@/public/icon-social-fb.svg";
 import Instagram from "@/public/icon-social-ig.svg";
 import Linkedin from "@/public/icon-social-in.svg";
@@ -41,7 +43,8 @@ export default function Home() {
 		</section>
 
 		<section data-layer="Video" className="Video max-w-[1200px] self-center rounded-2xl">
-			<div className="bg-[#b4d6a5] w-[1200px] rounded-2xl h-[679px]">{/*TODO VIDEO*/}</div>
+			{/*TODO VIDEO*/}
+			<img className="rounded-2xl" src="https://placehold.jp/1200x680.png" alt="" />
 		</section>
 
 
@@ -79,10 +82,10 @@ export default function Home() {
 				{/*TODO people*/}
 				<div className="w-44 h-24 relative">
 					<div className="w-44 h-12 left-0 top-[25.80px] absolute">
-						<img className="w-14 h-12 left-0 top-0 absolute rounded-full shadow-[0px_5.182241439819336px_5.182241439819336px_0px_rgba(0,0,0,0.08)] border-2 border-white" src="https://placehold.co/52x52" />
-						<img className="w-14 h-12 left-[122.28px] top-0 absolute rounded-full shadow-[0px_5.182241439819336px_5.182241439819336px_0px_rgba(0,0,0,0.08)] border-2 border-white" src="https://placehold.co/52x52" />
+						<img src="https://placehold.jp/100x100.png" className="w-14 h-12 left-0 top-0 absolute rounded-full shadow-[0px_5.182241439819336px_5.182241439819336px_0px_rgba(0,0,0,0.08)] border-2 border-white" alt="" />
+						<img src="https://placehold.jp/100x100.png" className="w-14 h-12 left-[122.28px] top-0 absolute rounded-full shadow-[0px_5.182241439819336px_5.182241439819336px_0px_rgba(0,0,0,0.08)] border-2 border-white" />
 					</div>
-					<img className="w-24 h-24 left-[35.12px] top-[-0px] absolute rounded-full shadow-[0px_10.346345901489258px_10.346345901489258px_0px_rgba(0,0,0,0.08)] border-2 border-white" src="https://placehold.co/104x103" />
+					<img className="w-24 h-24 left-[35.12px] top-[-0px] absolute rounded-full shadow-[0px_10.346345901489258px_10.346345901489258px_0px_rgba(0,0,0,0.08)] border-2 border-white" src="https://placehold.jp/100x100.png" />
 				</div>
 
 				<a href=""><Image src={Arrow} alt="" height={18} /></a>
@@ -132,28 +135,28 @@ export default function Home() {
 			</div>
 			<div className="grid grid-cols-3 gap-8">
 				<div className="flex flex-col items-center">
-				<div data-svg-wrapper className="w-[304px] h-[228px] bg-[#b4d6a5] rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)]"></div>
+				<img src="https://placehold.jp/280x200.png" className="rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)]" alt="" />
 				<div className="mt-4">
 					<span className="block text-[#2c2758] text-3xl font-bold">Kouzlo přírody,</span>
 					<span className="text-[#2c2758] text-xl">kterou si zamilujete!</span>
 				</div>
 				</div>
 				<div className="flex flex-col items-center">
-				<div data-svg-wrapper className="w-[304px] h-[228px] bg-white rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)]"></div>
+				<img src="https://placehold.jp/280x200.png" className="rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)]" alt="" />
 				<div className="mt-4">
 					<span className="block text-[#2c2758] text-3xl font-bold">Bohatá historie,</span>
 					<span className="text-[#2c2758] text-xl">která vypráví příběhy.</span>
 				</div>
 				</div>
 				<div className="flex flex-col items-center">
-				<div data-svg-wrapper className="w-[304px] h-[228px] bg-[#2c2758] rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)]"></div>
+				<img src="https://placehold.jp/280x200.png" className="rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)]" alt="" />
 				<div className="mt-4">
 					<span className="block text-[#2c2758] text-3xl font-bold">Luxusní lokalita</span>
 					<span className="text-[#2c2758] text-xl">jen pár kroků od centra!</span>
 				</div>
 				</div>
 			</div>
-			<Btn text="Chci prestižní adresu" iconPosition="right" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />} />
+			<Btn text="Chci prestižní adresu" iconPosition="right" icon={<Image src={Location} alt="Flash Icon" width={22} height={23} />} />
 		</section>
 
 		<section className="max-w-[780px] mx-auto bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-2xl p-8 flex flex-col items-center text-center gap-6">
@@ -184,7 +187,7 @@ export default function Home() {
 					<span className="text-[#2c2758] text-7xl">Praha na dlani</span>
 					<span className="text-[#8cb679] text-7xl">.</span>
 			</div>
-			<div className="w-[1200px] h-96 bg-white rounded-2xl shadow-[0px_4px_19.399999618530273px_0px_rgba(0,0,0,0.25)]" />
+			<img src="https://placehold.jp/1200x440.png" className="rounded-2xl shadow-[0px_4px_19.399999618530273px_0px_rgba(0,0,0,0.25)]" alt="" />
 		</section>
 
 		<section className="grid grid-cols-4 gap-6 max-w-[1200px] mx-auto" >
@@ -238,17 +241,17 @@ export default function Home() {
 				<div className="text-[#757575] text-xl">V místě, kde se setkává barokní krása Trojského zámku a přesto pouhých deset minut od pulzující metropole, objevíte klenot mezi pražskými pozemky.</div>
 				<Btn text="Chci prestižní adresu" iconPosition="right" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />} />
 			</div>
-			<div className="h-96 w-[584px] bg-[#b4d6a5] rounded-2xl shadow-md" />
+			<img src="https://placehold.jp/590x440.png" className="rounded-2xl shadow-md" alt="" />
 		</section>
 
 		<section className="max-w-[1200px] grid grid-cols-2 mx-auto items-center justify-between gap-10">
 			<div className="grid gap-12">
 				<div className="text-center text-[#2c2758] text-5xl">Centrum na dosah<span className="text-[#8cb679] text-5xl">.</span></div>
-				<div className="h-96 w-[584px] bg-white rounded-2xl shadow-md" />
+				<img src="https://placehold.jp/590x440.png" className="rounded-2xl shadow-md" alt="" />
 			</div>
 			<div className="grid gap-12">
 				<div className="text-center text-[#2c2758] text-5xl">Božský klid<span className="text-[#8cb679] text-5xl">.</span></div>
-				<div className="h-96 w-[584px] bg-[#e9f4e4] rounded-2xl shadow-md"  />
+				<img src="https://placehold.jp/590x440.png" className="rounded-2xl shadow-md" alt="" />
 			</div>
 		</section>
 
@@ -261,16 +264,10 @@ export default function Home() {
 				</div>
 				<div className="mx-auto text-white text-xl max-w-[1000px]">Spokojenost klientů je pro nás prioritou. Zkušenosti těch, kteří nám svěřili své investice a pozemky, dokazují naši odbornost a férový přístup. Vaše důvěra nás motivuje být stále lepšími.</div>
 			</div>
-			<div className="self-center grid grid-cols-[1fr_1fr_1fr] items-end gap-11">
-				<div className="h-[458px] w-[284px] p-10 bg-white rounded-2xl">
-					{/*TODO video*/}
-				</div>
-				<div className="border-[3px] border-white h-[510px] w-[284px] p-12 bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-2xl">
-					{/*TODO video*/}
-				</div>
-				<div className="h-[458px] w-[284px] p-10 bg-white rounded-2xl">
-					{/*TODO video*/}
-				</div>
+			<div className="items-end justify-items-center self-center grid grid-cols-[1fr_1fr_1fr] gap-11">
+				<img src="https://placehold.jp/290x510.png" className="max-h-[460px] rounded-2xl" alt="" />
+				<img src="https://placehold.jp/290x510.png" className="max-h-[510px] border-[3px] border-white rounded-2xl" alt="" />
+				<img src="https://placehold.jp/290x510.png" className="max-h-[460px] rounded-2xl" alt="" />
 			</div>
 				<a href="">
 					<div className="text-white text-lg">Prohlédnout všechny reference</div>
@@ -321,12 +318,12 @@ export default function Home() {
 				<input type="email" placeholder="E-mail" className="border-b p-2 outline-none" />
 				<textarea placeholder="Vaše zpráva" className="border p-2 rounded-lg min-h-[100px] outline-none"></textarea>
 				<div className="self-center">
-					<Btn text="Odeslat zprávu" iconPosition="left" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />} />
+					<Btn text="Odeslat zprávu" iconPosition="left" icon={<Image src={Cursor} alt="Flash Icon" width={22} height={23} />} />
 				</div>
 			</div>
 		</section>
 
-		<footer className="bg-indigo-950 px-[120px] py-[68px]">
+		<footer className="bg-[#2c2758] px-[120px] py-[68px]">
 			<div className="max-w-[1220px] mx-auto">
 				<div className="grid grid-cols-5 gap-8 my-8">
 					<div className="text-white col-span-2 space-y-4">
