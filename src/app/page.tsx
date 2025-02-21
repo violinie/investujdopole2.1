@@ -23,15 +23,15 @@ export default function Home() {
 					<li><a href="" className="text-[#757575] text-base font-normal">Kontakt</a></li>
 				</ul>
 			</nav>
-			<Btn text="Chci poslední pozemek" iconPosition="left" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />}  />
+			<Btn text="Chci poslední pozemek" iconPosition="left" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />} />
 		</header>
 
 		<section data-layer="Hero Container" className="HeroContainer max-w-[1200px] flex-col self-center justify-start items-center gap-9 inline-flex">
 			<div className="self-stretch flex-col justify-start items-center gap-6 flex">
-				<div className="self-stretch text-center"><span className="text-[#2c2758] text-7xl font-bold">Poslední perla <br/>trojských pozemků</span><span className="text-[#8cb679] text-7xl font-bold font-['Roboto'] leading-10">.</span></div>
-				<div className="text-center text-[#757575] text-2xl font-normal0">Objevte jedinečnou příležitost vlastnit poslední pozemek<br/> této velikosti a exkluzivity v Praze-Troji.</div>
+				<div className="self-stretch text-center"><span className="text-[#2c2758] text-7xl font-bold">Poslední perla <br/>trojských pozemků</span><span className="text-[#8cb679] text-7xl font-bold">.</span></div>
+				<div className="text-center text-[#757575] text-2xl">Objevte jedinečnou příležitost vlastnit poslední pozemek<br/> této velikosti a exkluzivity v Praze-Troji.</div>
 			</div>
-			<Btn text="Chci poslední pozemek" iconPosition="left" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />}  />
+			<Btn text="Chci poslední pozemek" iconPosition="left" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />} />
 		</section>
 
 		<section data-layer="Video" className="Video max-w-[1200px] self-center rounded-2xl">
@@ -219,12 +219,26 @@ export default function Home() {
 				</div>
 			</div>
 		</section>
+
+		<section className="max-w-[1200px] grid grid-cols-2 mx-auto items-center justify-between gap-10">
+			<div className="flex flex-col gap-6">
+				<div className="text-4xl font-bold leading-[1.5]">
+					<span className="text-[#8cb679]">Srdce</span>
+					<span className="text-[#2c2758]"> pražské Troji<br /> ve výjimečném sousedství</span>
+					<span className="text-[#8cb679]">.</span>
+				</div>
+				<div className="text-[#757575] text-xl">V místě, kde se setkává barokní krása Trojského zámku a přesto pouhých deset minut od pulzující metropole, objevíte klenot mezi pražskými pozemky.</div>
+				<Btn text="Chci prestižní adresu" iconPosition="right" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />} />
+			</div>
+			<div className="h-96 w-[584px] bg-[#b4d6a5] rounded-2xl shadow-md" />
+		</section>
+
 		{/* CONTINUE HERE */}
 
 		<section className="max-w-[1200px] p-12 flex justify-between bg-indigo-950 rounded-xl">
 			<div className="flex flex-col text-white">
-				<div className="left-0 top-[47px]"><span className="text-white text-7xl font-normal leading-10">Bc. František <br/>Šťastník</span><span className="text-[#b4d6a5] text-7xl font-normal  leading-10">.</span></div>
-				<div className="left-0 top-0 text-[#b4d6a5] text-xl font-normal uppercase leading-loose">Váš realitní makléř</div>
+				<div className="left-0 top-[47px]"><span className="text-white text-7xl">Bc. František <br/>Šťastník</span><span className="text-[#b4d6a5] text-7xl font-normal  leading-10">.</span></div>
+				<div className="left-0 top-0 text-[#b4d6a5] text-xl uppercase">Váš realitní makléř</div>
 			</div>
 		</section>
 
