@@ -1,24 +1,43 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
+import { cn } from "../lib/utils";
 
-interface BtnProps {
-  text: string;
+type BtnProps = PropsWithChildren<{
+  size?: "md" | "lg";
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
-}
+}>;
 
-const Btn: React.FC<BtnProps> = ({ text, icon, iconPosition = "right" }) => {
+const Btn: React.FC<BtnProps> = ({
+  children,
+  icon,
+  iconPosition = "right",
+  size = "md",
+}) => {
   return (
-    <div className="justify-start items-center gap-6 inline-flex">
-      <div className="justify-start items-center gap-6 flex">
-        <button
-          className="px-6 py-4 bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-3xl justify-center items-center gap-2.5 flex"
-        >
-          {icon && iconPosition === "left" && <div className="relative">{icon}</div>}
-          <span className="text-white text-lg font-normal">{text}</span>
-          {icon && iconPosition === "right" && <div className="relative">{icon}</div>}
-        </button>
-      </div>
-    </div>
+    <button
+      className={cn(
+        "flex items-center justify-center gap-1 rounded-full bg-gradient-to-b from-primary-blue to-primary-blue-light py-3 transition hover:from-primary-blue-light hover:to-primary-blue-light hover:shadow-lg",
+        {
+          "gap-2 px-6 py-4": size === "lg",
+          "pl-4 pr-5": iconPosition === "left",
+          "pl-5 pr-4": iconPosition === "right",
+        },
+      )}
+    >
+      {icon && iconPosition === "left" && (
+        <div className="relative">{icon}</div>
+      )}
+      <span
+        className={cn("text-sm font-medium text-white", {
+          "text-base": size === "lg",
+        })}
+      >
+        {children}
+      </span>
+      {icon && iconPosition === "right" && (
+        <div className="relative">{icon}</div>
+      )}
+    </button>
   );
 };
 

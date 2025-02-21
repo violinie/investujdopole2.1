@@ -7,13 +7,18 @@ export default {
     "./src/styles/**/*.{css}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+    },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "primary-blue": "var(--primary-blue)",
+        "primary-blue-light": "var(--primary-blue-light)",
+        "primary-green-light": "var(--primary-green-light)",
       },
       fontFamily: {
-        sans: ['var(--font-noto-sans)'],
+        sans: ["var(--font-noto-sans)"],
       },
     },
   },
