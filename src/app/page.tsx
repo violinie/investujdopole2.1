@@ -233,6 +233,17 @@ export default function Home() {
 			<div className="h-96 w-[584px] bg-[#b4d6a5] rounded-2xl shadow-md" />
 		</section>
 
+		<section className="max-w-[1200px] grid grid-cols-2 mx-auto items-center justify-between gap-10">
+			<div className="grid gap-12">
+				<div className="text-center text-[#2c2758] text-5xl">Centrum na dosah<span className="text-[#8cb679] text-5xl">.</span></div>
+				<div className="h-96 w-[584px] bg-white rounded-2xl shadow-md" />
+			</div>
+			<div className="grid gap-12">
+				<div className="text-center text-[#2c2758] text-5xl">Božský klid<span className="text-[#8cb679] text-5xl">.</span></div>
+				<div className="h-96 w-[584px] bg-[#e9f4e4] rounded-2xl shadow-md"  />
+			</div>
+		</section>
+
 		{/* CONTINUE HERE */}
 
 		<section className="max-w-[1200px] p-12 flex justify-between bg-indigo-950 rounded-xl">
