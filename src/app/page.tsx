@@ -13,7 +13,7 @@ import Crow from "@/public/crow.svg";
 export default function Home() {
 	return (
 	<div className="flex flex-col gap-[120px]">
-		<header className="p-6 flex justify-between items-center">
+		<header className="p-6 w-[1200px] max-w-[1200px] mx-auto flex justify-between items-center">
 		<a href="https://www.investujdopole.cz/"><Image src={Logo} alt="Logo Investuj do pole" width={150} height={50} /></a>
 			<nav>
 				<ul className={"flex gap-10"}>
