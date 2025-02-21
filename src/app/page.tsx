@@ -281,10 +281,43 @@ export default function Home() {
 
 		{/* CONTINUE HERE */}
 
-		<section className="max-w-[1200px] p-12 flex justify-between bg-indigo-950 rounded-xl">
-			<div className="flex flex-col text-white">
-				<div className="left-0 top-[47px]"><span className="text-white text-7xl">Bc. František <br/>Šťastník</span><span className="text-[#b4d6a5] text-7xl font-normal  leading-10">.</span></div>
-				<div className="left-0 top-0 text-[#b4d6a5] text-xl uppercase">Váš realitní makléř</div>
+		<section className="w-full max-w-[1200px] mx-auto bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-2xl p-12 flex gap-10">
+			<div className="flex flex-col text-white gap-6 w-1/2">
+				<div className="text-[#b4d6a5] text-xl uppercase">Váš realitní makléř</div>
+				<div className="text-white text-7xl">Bc. František <br/>Šťastník<span className="text-[#b4d6a5] text-7xl">.</span></div>
+
+				<div className="flex flex-col gap-4">
+				<div className="flex items-center gap-3">
+					{/* TODO icon mail */}
+					<span>frantisek.stastnik@investujdopole.cz</span>
+				</div>
+				<div className="flex items-center gap-3 bg-[#8cb679] p-3 rounded-lg">
+					{/* TODO icon phone */}
+					<span>+420 775 972 405</span>
+				</div>
+				<div className="flex items-center gap-3">
+					{/* TODO icon web */}
+					<span>investujdopole.cz</span>
+				</div>
+				</div>
+
+				{/* Social Icons */}
+				<div className="flex gap-4 mt-4">
+
+				</div>
+			</div>
+
+			{/* Right Side (Form) */}
+			<div className="w-1/2 bg-white p-8 rounded-2xl shadow-md flex flex-col gap-6">
+				<h3 className="text-2xl font-bold text-[#2c2758]">Kontaktujte mě.</h3>
+				<input type="text" placeholder="Jméno Příjmení" className="border-b p-2 outline-none" />
+				<input type="text" placeholder="Telefonní číslo" className="border-b p-2 outline-none" />
+				<input type="email" placeholder="E-mail" className="border-b p-2 outline-none" />
+				<textarea placeholder="Vaše zpráva" className="border p-2 rounded-lg min-h-[100px] outline-none"></textarea>
+				<button className="bg-[#2c2758] text-white flex items-center gap-2 py-3 px-6 rounded-xl">
+
+				Odeslat zprávu
+				</button>
 			</div>
 		</section>
 
