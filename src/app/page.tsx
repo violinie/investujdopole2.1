@@ -270,6 +270,15 @@ export default function Home() {
 				</a>
 		</section>
 
+		<section data-layer="Hero Container" className="HeroContainer max-w-[1200px] flex-col self-center justify-start items-center gap-14 inline-flex">
+			<div className="self-stretch flex-col justify-start items-center gap-6 flex">
+				<div className="text-[#b4d6a5] text-xl uppercase">Nepropásněte to!</div>
+				<div className="self-stretch text-center"><span className="text-[#2c2758] text-7xl font-bold">Příležitost, kterou mátejen jednou za život</span><span className="text-[#8cb679] text-7xl font-bold">.</span></div>
+			</div>
+				<div className="text-center text-[#757575] text-2xl">Domluvte si prohlídku této výjimečné investiční příležitosti.</div>
+			<Image src={Arrow} alt="" height={18} className="rotate-90"/>
+		</section>
+
 		{/* CONTINUE HERE */}
 
 		<section className="max-w-[1200px] p-12 flex justify-between bg-indigo-950 rounded-xl">
