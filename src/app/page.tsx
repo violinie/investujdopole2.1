@@ -3,8 +3,10 @@ import Image from "next/image";
 import Logo from "@/public/logo.svg";
 import LogoLight from "@/public/logo--white.svg";
 import Arrow from "@/public/icon-arrow.svg";
+import Tick from "@/public/icon-tick.svg";
 import Graph from "@/public/graph.svg";
 import Rating from "@/public/rating-stars.svg";
+import Crow from "@/public/crow.svg";
 
 
 
@@ -146,6 +148,35 @@ export default function Home() {
 			</div>
 			<Btn text="Chci prestižní adresu" iconPosition="right" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />} />
 		</section>
+
+		<section className="max-w-[780px] mx-auto bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-2xl p-8 flex flex-col items-center text-center gap-6">
+    {/* Crown Icon */}
+    <Image src={Crow} alt="" className="w-16 h-16" />
+
+    {/* Title & Subtitle */}
+    <div>
+        <h2 className="text-white text-3xl font-bold">Staňte se majitelem této trofejní nemovitosti<br />
+        	<span className="text-white text-xl mt-2 font-normal"> a využijte neopakovatelné příležitosti!</span>
+		</h2>
+    </div>
+
+    {/* Bullet Points */}
+    <div className="flex justify-between gap-8 w-full">
+        <div className="flex items-center gap-3">
+            <Image src={Tick} alt="" />
+            <span className="text-white text-lg">Poslední pozemek</span>
+        </div>
+        <div className="flex items-center gap-3">
+            <Image src={Tick} alt="" />
+            <span className="text-white text-lg">Prestižní lokalita</span>
+        </div>
+        <div className="flex items-center gap-3">
+            <Image src={Tick} alt="" />
+            <span className="text-white text-lg">V blízkosti centra</span>
+        </div>
+    </div>
+</section>
+
 
 		<section className="max-w-[1200px] p-12 flex justify-between bg-indigo-950 rounded-xl">
 			<div className="flex flex-col text-white">
