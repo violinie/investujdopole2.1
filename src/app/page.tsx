@@ -24,7 +24,6 @@ export default function Home() {
 				</ul>
 			</nav>
 			<Btn text="Chci poslední pozemek" iconPosition="left" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />}  />
-
 		</header>
 
 		<section data-layer="Hero Container" className="HeroContainer max-w-[1200px] flex-col self-center justify-start items-center gap-9 inline-flex">
@@ -179,6 +178,48 @@ export default function Home() {
 			</div>
 			<div className="w-[1200px] h-96 bg-white rounded-2xl shadow-[0px_4px_19.399999618530273px_0px_rgba(0,0,0,0.25)]" />
 		</section>
+
+		<section className="grid grid-cols-4 gap-6 max-w-[1200px] mx-auto" >
+			<div className="p-6 flex flex-col justify-center gap-6 bg-[#2c2758] rounded-2xl shadow-[0px_8px_17px_0px_rgba(0,0,0,0.10)] shadow-[0px_31px_31px_0px_rgba(0,0,0,0.09)] border border-[#e9f4e4]">
+				<div className="text-[#b4d6a5] text-4xl">Zastavitelná plocha</div>
+				<div className="text-white text-lg">Metropolitní plán</div>
+			</div>
+			<div className="bg-[#e9f4e4] p-6 flex flex-col gap-6 rounded-2xl shadow-[0px_8px_17px_0px_rgba(0,0,0,0.10)] shadow-[0px_31px_31px_0px_rgba(0,0,0,0.09)] border border-[#e9f4e4]">
+				<div className="w-14 h-14 ml-auto relative bg-[#2c2758] rounded-full border border-[#e9f4e4]" />
+				<div data-svg-wrapper className="left-[11.05px] top-[10.28px] absolute">
+					{/* TODO svg */}
+				</div>
+				<div>
+					<div className="text-[#86b870] text-4xl">
+						<span className="text-[#2c2758] text-4xl">6 055</span>
+						<span> m</span>
+						<sup>2</sup>
+					</div>
+					<div className="text-[#2c2758] text-lg">Celková výměra pozemků</div>
+				</div>
+			</div>
+			<div className="bg-[#e9f4e4] p-6 flex flex-col gap-6 rounded-2xl shadow-[0px_8px_17px_0px_rgba(0,0,0,0.10)] shadow-[0px_31px_31px_0px_rgba(0,0,0,0.09)] border border-[#e9f4e4]">
+				<div className="w-14 h-14 ml-auto relative bg-[#2c2758] rounded-full border border-[#e9f4e4]" />
+				<div data-svg-wrapper className="left-[11.05px] top-[10.28px] absolute">
+					{/* TODO svg */}
+				</div>
+				<div>
+					<div className="text-[#2c2758] text-4xl">Troja</div>
+					<div className="text-[#2c2758] text-lg">Pražská luxusní lokalita</div>
+				</div>
+			</div>
+			<div className="bg-[#e9f4e4] p-6 flex flex-col gap-6 rounded-2xl shadow-[0px_8px_17px_0px_rgba(0,0,0,0.10)] shadow-[0px_31px_31px_0px_rgba(0,0,0,0.09)] border border-[#e9f4e4]">
+				<div className="w-14 h-14 ml-auto relative bg-[#2c2758] rounded-full border border-[#e9f4e4]" />
+				<div data-svg-wrapper className="left-[11.05px] top-[10.28px] absolute">
+					{/* TODO svg */}
+				</div>
+				<div>
+					<div className="text-[#2c2758] text-4xl">Výstavba RD</div>
+					<div className="text-[#2c2758] text-lg">Poslední v této lokalitě</div>
+				</div>
+			</div>
+		</section>
+		{/* CONTINUE HERE */}
 
 		<section className="max-w-[1200px] p-12 flex justify-between bg-indigo-950 rounded-xl">
 			<div className="flex flex-col text-white">
