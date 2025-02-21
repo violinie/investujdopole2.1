@@ -132,14 +132,14 @@ export default function Home() {
 				</div>
 				</div>
 				<div className="flex flex-col items-center">
-				<div data-svg-wrapper className="w-[304px] h-[228px] bg-[#b4d6a5] rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)]"></div>
+				<div data-svg-wrapper className="w-[304px] h-[228px] bg-white rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)]"></div>
 				<div className="mt-4">
 					<span className="block text-[#2c2758] text-3xl font-bold">Bohatá historie,</span>
 					<span className="text-[#2c2758] text-xl">která vypráví příběhy.</span>
 				</div>
 				</div>
 				<div className="flex flex-col items-center">
-				<div data-svg-wrapper className="w-[304px] h-[228px] bg-[#b4d6a5] rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)]"></div>
+				<div data-svg-wrapper className="w-[304px] h-[228px] bg-[#2c2758] rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)]"></div>
 				<div className="mt-4">
 					<span className="block text-[#2c2758] text-3xl font-bold">Luxusní lokalita</span>
 					<span className="text-[#2c2758] text-xl">jen pár kroků od centra!</span>
@@ -150,33 +150,35 @@ export default function Home() {
 		</section>
 
 		<section className="max-w-[780px] mx-auto bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-2xl p-8 flex flex-col items-center text-center gap-6">
-    {/* Crown Icon */}
-    <Image src={Crow} alt="" className="w-16 h-16" />
+			<Image src={Crow} alt="" className="w-16 h-16" />
+			<div>
+				<h2 className="text-white text-3xl font-bold">Staňte se majitelem této trofejní nemovitosti<br />
+					<span className="text-white text-xl mt-2 font-normal"> a využijte neopakovatelné příležitosti!</span>
+				</h2>
+			</div>
+			<div className="flex justify-between gap-8 w-full">
+				<div className="flex items-center gap-3">
+					<Image src={Tick} alt="" />
+					<span className="text-white text-lg">Poslední pozemek</span>
+				</div>
+				<div className="flex items-center gap-3">
+					<Image src={Tick} alt="" />
+					<span className="text-white text-lg">Prestižní lokalita</span>
+				</div>
+				<div className="flex items-center gap-3">
+					<Image src={Tick} alt="" />
+					<span className="text-white text-lg">V blízkosti centra</span>
+				</div>
+			</div>
+		</section>
 
-    {/* Title & Subtitle */}
-    <div>
-        <h2 className="text-white text-3xl font-bold">Staňte se majitelem této trofejní nemovitosti<br />
-        	<span className="text-white text-xl mt-2 font-normal"> a využijte neopakovatelné příležitosti!</span>
-		</h2>
-    </div>
-
-    {/* Bullet Points */}
-    <div className="flex justify-between gap-8 w-full">
-        <div className="flex items-center gap-3">
-            <Image src={Tick} alt="" />
-            <span className="text-white text-lg">Poslední pozemek</span>
-        </div>
-        <div className="flex items-center gap-3">
-            <Image src={Tick} alt="" />
-            <span className="text-white text-lg">Prestižní lokalita</span>
-        </div>
-        <div className="flex items-center gap-3">
-            <Image src={Tick} alt="" />
-            <span className="text-white text-lg">V blízkosti centra</span>
-        </div>
-    </div>
-</section>
-
+		<section className="max-w-[1200px] flex flex-col mx-auto gap-12">
+			<div className="self-stretch text-center">
+					<span className="text-[#2c2758] text-7xl">Praha na dlani</span>
+					<span className="text-[#8cb679] text-7xl">.</span>
+			</div>
+			<div className="w-[1200px] h-96 bg-white rounded-2xl shadow-[0px_4px_19.399999618530273px_0px_rgba(0,0,0,0.25)]" />
+		</section>
 
 		<section className="max-w-[1200px] p-12 flex justify-between bg-indigo-950 rounded-xl">
 			<div className="flex flex-col text-white">
