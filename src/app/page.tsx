@@ -4,6 +4,12 @@ import Logo from "@/public/logo.svg";
 import LogoLight from "@/public/logo--white.svg";
 import Arrow from "@/public/icon-arrow.svg";
 import Tick from "@/public/icon-tick.svg";
+import Mail from "@/public/icon-mail.svg";
+import Phone from "@/public/icon-phone.svg";
+import Web from "@/public/icon-web.svg";
+import Facebook from "@/public/icon-social-fb.svg";
+import Instagram from "@/public/icon-social-ig.svg";
+import Linkedin from "@/public/icon-social-in.svg";
 import Graph from "@/public/graph.svg";
 import Rating from "@/public/rating-stars.svg";
 import Crow from "@/public/crow.svg";
@@ -279,45 +285,42 @@ export default function Home() {
 			<Image src={Arrow} alt="" height={18} className="rotate-90"/>
 		</section>
 
-		{/* CONTINUE HERE */}
+		<section className="w-full max-w-[1200px] mx-auto bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-2xl p-12 grid grid-cols-2 gap-10">
+			<div className="flex flex-col text-white gap-6 flex-1 justify-between">
+				<div>
+					<div className="text-[#b4d6a5] text-xl uppercase">Váš realitní makléř</div>
+					<div className="text-white text-7xl">Bc. František <br/>Šťastník<span className="text-[#b4d6a5] text-7xl">.</span></div>
 
-		<section className="w-full max-w-[1200px] mx-auto bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-2xl p-12 flex gap-10">
-			<div className="flex flex-col text-white gap-6 w-1/2">
-				<div className="text-[#b4d6a5] text-xl uppercase">Váš realitní makléř</div>
-				<div className="text-white text-7xl">Bc. František <br/>Šťastník<span className="text-[#b4d6a5] text-7xl">.</span></div>
-
-				<div className="flex flex-col gap-4">
-				<div className="flex items-center gap-3">
-					{/* TODO icon mail */}
-					<span>frantisek.stastnik@investujdopole.cz</span>
+					<div className="flex flex-col gap-4">
+						<div className="flex items-center gap-3">
+							<Image src={Mail} alt="" />
+							<a href="mailto:frantisek.stastnik@investujdopole.cz">frantisek.stastnik@investujdopole.cz</a>
+						</div>
+						<div className="pl-5 pr-52 py-5 bg-[#b4d6a5]/50 rounded-xl border-2 border-[#b4d6a5] justify-start items-center gap-3.5 inline-flex">
+							<Image src={Phone} alt="" />
+							<a href="tel:+420775972405">+420 775 972 405</a>
+						</div>
+						<div className="flex items-center gap-3">
+							<Image src={Web} alt="" />
+							<a href="https://www.investujdopole.cz/">Investujdopole.cz</a>
+						</div>
+					</div>
 				</div>
-				<div className="flex items-center gap-3 bg-[#8cb679] p-3 rounded-lg">
-					{/* TODO icon phone */}
-					<span>+420 775 972 405</span>
-				</div>
-				<div className="flex items-center gap-3">
-					{/* TODO icon web */}
-					<span>investujdopole.cz</span>
-				</div>
-				</div>
-
-				{/* Social Icons */}
 				<div className="flex gap-4 mt-4">
-
+					<a href=""><Image src={Facebook} alt="" /></a>
+					<a href=""><Image src={Instagram} alt="" /></a>
+					<a href=""><Image src={Linkedin} alt="" /></a>
 				</div>
 			</div>
-
-			{/* Right Side (Form) */}
-			<div className="w-1/2 bg-white p-8 rounded-2xl shadow-md flex flex-col gap-6">
-				<h3 className="text-2xl font-bold text-[#2c2758]">Kontaktujte mě.</h3>
-				<input type="text" placeholder="Jméno Příjmení" className="border-b p-2 outline-none" />
+			<div className="bg-white p-8 rounded-2xl shadow-md flex flex-col gap-6 text-[#2c2758]">
+				<h3 className="text-5xl font-bold text-[#2c2758]">Kontaktujte mě.</h3>
+				<input type="text" placeholder="Jméno Příjmení" className="border-b p-2 outline-none text-[#2c2758] placeholder-[#757575]" />
 				<input type="text" placeholder="Telefonní číslo" className="border-b p-2 outline-none" />
 				<input type="email" placeholder="E-mail" className="border-b p-2 outline-none" />
 				<textarea placeholder="Vaše zpráva" className="border p-2 rounded-lg min-h-[100px] outline-none"></textarea>
-				<button className="bg-[#2c2758] text-white flex items-center gap-2 py-3 px-6 rounded-xl">
-
-				Odeslat zprávu
-				</button>
+				<div className="self-center">
+					<Btn text="Odeslat zprávu" iconPosition="left" icon={<Image src="/icon-flash.svg" alt="Flash Icon" width={22} height={23} />} />
+				</div>
 			</div>
 		</section>
 
