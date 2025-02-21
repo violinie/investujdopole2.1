@@ -244,6 +244,32 @@ export default function Home() {
 			</div>
 		</section>
 
+		<section className="bg-[#2c2758] py-16 flex flex-col justify-center text-center gap-16">
+			<div className="grid gap-6">
+				<div className="text-5xl">
+					<span className="text-white">5 000</span>
+					<span className="text-[#b4d6a5]">+</span>
+					<span className="text-white"> spokojených klientů</span>
+				</div>
+				<div className="mx-auto text-white text-xl max-w-[1000px]">Spokojenost klientů je pro nás prioritou. Zkušenosti těch, kteří nám svěřili své investice a pozemky, dokazují naši odbornost a férový přístup. Vaše důvěra nás motivuje být stále lepšími.</div>
+			</div>
+			<div className="self-center grid grid-cols-[1fr_1fr_1fr] items-end gap-11">
+				<div className="h-[458px] w-[284px] p-10 bg-white rounded-2xl">
+					{/*TODO video*/}
+				</div>
+				<div className="border-[3px] border-white h-[510px] w-[284px] p-12 bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-2xl">
+					{/*TODO video*/}
+				</div>
+				<div className="h-[458px] w-[284px] p-10 bg-white rounded-2xl">
+					{/*TODO video*/}
+				</div>
+			</div>
+				<a href="">
+					<div className="text-white text-lg">Prohlédnout všechny reference</div>
+					{/*TODO arrow icon*/}
+				</a>
+		</section>
+
 		{/* CONTINUE HERE */}
 
 		<section className="max-w-[1200px] p-12 flex justify-between bg-indigo-950 rounded-xl">
