@@ -44,8 +44,10 @@ export default function Home() {
 			<div className="bg-[#b4d6a5] w-[1200px] rounded-2xl h-[679px]">{/*TODO VIDEO*/}</div>
 		</section>
 
-		<section data-layer="Social proof" className="SocialProof max-w-[1200px] self-center grid grid-cols-[1fr_1.4fr_1fr] items-center grid-rows-[auto_1fr_auto] gap-8">
-			<div className="p-10 bg-white rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)] flex-col justify-center items-center gap-7 self-center flex">
+
+
+		<section data-layer="Social proof" className="SocialProof max-w-[1220px] self-center grid grid-cols-[1fr_1.4fr_1fr] gap-11">
+			<div className="self-baseline p-10 bg-white rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)] flex-col justify-center items-center gap-7 self-center flex">
 				<div className="justify-start items-start gap-10 inline-flex">
 				<div className="flex-col justify-start items-center gap-1.5 inline-flex">
 					<div><span className="text-[#2c2758] text-4xl font-black">20</span><span className="text-[#8cb679] text-4xl font-black font-['Noto Sans'] leading-10">+</span></div>
@@ -69,7 +71,7 @@ export default function Home() {
 					<Image src={Arrow} alt="" height={18} />
 				</a>
 			</div>
-			<div className="p-12 bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-2xl shadow-[12.955601692199707px_5.182241439819336px_51.82240676879883px_0px_rgba(0,0,0,0.16)] flex-col justify-center items-center gap-4 flex row-span-2">
+			<div className="self-baseline p-12 bg-gradient-to-b from-[#2c2758] to-[#3b357a] rounded-2xl shadow-[12.955601692199707px_5.182241439819336px_51.82240676879883px_0px_rgba(0,0,0,0.16)] flex-col justify-center items-center gap-4 flex row-span-2">
 				<div className="justify-center items-center gap-4 inline-flex">
 				{/*TODO slider*/}
 				<a href=""><Image src={Arrow} alt="" height={18} className="rotate-180" /></a>
@@ -96,7 +98,7 @@ export default function Home() {
 					<Image src={Arrow} alt="" height={18} />
 				</a>
 			</div>
-			<div className="p-10 bg-white rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)] flex-col justify-center items-center gap-8 self-center flex">
+			<div className="self-baseline p-10 bg-white rounded-2xl shadow-[11.91822338104248px_8.342756271362305px_23.83644676208496px_0px_rgba(0,0,0,0.08)] flex-col justify-center items-center gap-8 self-center flex">
 				<div className="justify-center items-center gap-3.5 inline-flex">
 				<div className="text-center text-[#2c2758] text-xl font-normal">Vývoj ceny pozemků</div>
 				</div>
