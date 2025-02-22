@@ -15,6 +15,7 @@ import Linkedin from "@/public/icon-social-in.svg";
 import Graph from "@/public/graph.svg";
 import Rating from "@/public/rating-stars.svg";
 import Crow from "@/public/crow.svg";
+import TestimonialSlider from "../components/TestimonialSlider";
 
 export default function Home() {
   return (
@@ -24,8 +25,7 @@ export default function Home() {
           <Image
             src={Logo}
             alt="Logo Investuj do pole"
-            width={150}
-            height={50}
+            width={180}
           />
         </a>
         <nav>
@@ -184,59 +184,7 @@ export default function Home() {
           </a>
         </div>
         <div className="row-span-2 flex flex-col items-center justify-center gap-4 self-baseline rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-12 shadow-2xl">
-          <div className="inline-flex items-center justify-center gap-4">
-            {/*TODO slider*/}
-            <a href="">
-              <Image src={Arrow} alt="" height={18} className="rotate-180" />
-            </a>
-
-            {/*TODO people*/}
-            <div className="relative">
-              <div className="flex items-center">
-                <img
-                  src="https://placehold.jp/100x100.png"
-                  className="-mr-6 size-16 rounded-full border-2 border-white shadow-xl"
-                  alt=""
-                />
-                <img
-                  className="z-10 size-28 rounded-full border-2 border-white shadow-xl"
-                  src="https://placehold.jp/100x100.png"
-                />
-                <img
-                  src="https://placehold.jp/100x100.png"
-                  className="-ml-6 size-16 rounded-full border-2 border-white shadow-xl"
-                />
-              </div>
-            </div>
-
-            <a href="">
-              <Image src={Arrow} alt="" height={18} />
-            </a>
-          </div>
-          <div className="text-2xl text-white">Dagmar</div>
-          <div className="self-stretch text-center text-base text-white">
-            Spolupráce s Investujdopole.cz byla pro mě příjemnou a profesionální
-            zkušeností. Oceňuji především jejich lidský přístup, férové jednání
-            a schopnost srozumitelně vysvětlit celý proces obchodu s pozemky.
-          </div>
-          <div className="inline-flex items-center justify-center gap-4">
-            <div>
-              <span className="text-xl text-white">4.5</span>
-              <span className="text-xs font-normal text-[#b4d6a5]">
-                /5.0 hodnocení
-              </span>
-            </div>
-            <Image src={Rating} alt="" />
-          </div>
-          <a
-            href=""
-            className="inline-flex items-center justify-center gap-2.5 p-1.5"
-          >
-            <div className="text-sm font-normal text-white">
-              Zobrazit všechny recenze
-            </div>
-            <Image src={Arrow} alt="" height={18} />
-          </a>
+          <TestimonialSlider />
         </div>
         <div className="flex flex-col items-center justify-center gap-8 self-center self-baseline rounded-2xl bg-white p-10 shadow-xl">
           <div className="inline-flex items-center justify-center gap-3.5">

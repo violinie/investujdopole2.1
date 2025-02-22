@@ -16,7 +16,7 @@ const Btn: React.FC<BtnProps> = ({
   return (
     <button
       className={cn(
-        "flex items-center justify-center gap-1 rounded-full bg-gradient-to-b from-primary-blue to-primary-blue-light py-3 transition hover:from-primary-blue-light hover:to-primary-blue-light hover:shadow-lg",
+        "group flex items-center justify-center gap-1 rounded-full bg-gradient-to-b from-primary-blue to-primary-blue-light py-3 transition hover:from-primary-blue-light hover:to-primary-blue-light hover:shadow-lg",
         {
           "gap-2 px-6 py-4": size === "lg",
           "pl-4 pr-5": iconPosition === "left",
@@ -25,7 +25,9 @@ const Btn: React.FC<BtnProps> = ({
       )}
     >
       {icon && iconPosition === "left" && (
-        <div className="relative">{icon}</div>
+        <span className="scale-100 transition group-hover:scale-125">
+          {icon}
+        </span>
       )}
       <span
         className={cn("text-sm font-medium text-white", {
@@ -35,7 +37,9 @@ const Btn: React.FC<BtnProps> = ({
         {children}
       </span>
       {icon && iconPosition === "right" && (
-        <div className="relative">{icon}</div>
+        <span className="scale-100 transition group-hover:scale-125">
+          {icon}
+        </span>
       )}
     </button>
   );
