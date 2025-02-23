@@ -19,8 +19,8 @@ import TestimonialSlider from "../components/TestimonialSlider";
 
 export default function Home() {
   return (
-    <div className="container flex flex-col gap-[120px]">
-      <header className="mx-auto flex w-full items-center justify-between p-6">
+    <div className="flex flex-col gap-[120px]">
+      <header className="container mx-auto flex w-full items-center justify-between p-6">
         <a href="https://www.investujdopole.cz/">
           <Image
             src={Logo}
@@ -81,7 +81,7 @@ export default function Home() {
 
       <section
         data-layer="Hero Container"
-        className="HeroContainer inline-flex flex-col items-center justify-start gap-9 self-center"
+        className="HeroContainer container inline-flex flex-col items-center justify-start gap-9 self-center"
       >
         <div className="flex flex-col items-center justify-start gap-6 self-stretch">
           <div className="self-stretch text-center">
@@ -114,7 +114,7 @@ export default function Home() {
         </Btn>
       </section>
 
-      <section data-layer="Video" className="Video self-center rounded-2xl">
+      <section data-layer="Video" className="Video container self-center rounded-2xl">
         {/*TODO VIDEO*/}
         <img
           className="rounded-2xl"
@@ -125,7 +125,7 @@ export default function Home() {
 
       <section
         data-layer="Social proof"
-        className="SocialProof grid grid-cols-[1fr_1.4fr_1fr] gap-11 self-center"
+        className="SocialProof container grid grid-cols-[1fr_1.4fr_1fr] gap-11 self-center"
       >
         <div className="flex flex-col items-center justify-center gap-7 self-center self-baseline rounded-2xl bg-white p-10 shadow-xl">
           <div className="inline-flex items-start justify-start gap-10">
@@ -224,7 +224,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto flex flex-col items-center gap-12 text-center">
+      <section className="container mx-auto flex flex-col items-center gap-12 text-center">
         <div className="flex flex-col items-center gap-6">
           <div className="text-xl text-[#b4d6a5]">Nepropásněte</div>
           <div className="text-5xl font-bold text-primary-blue">
@@ -292,7 +292,7 @@ export default function Home() {
         </Btn>
       </section>
 
-      <section className="mx-auto flex max-w-[780px] flex-col items-center gap-6 rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-8 text-center">
+      <section className="container mx-auto flex max-w-[780px] flex-col items-center gap-6 rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-8 text-center">
         <Image src={Crow} alt="" className="h-16 w-16" />
         <div>
           <h2 className="text-3xl font-bold text-white">
@@ -320,7 +320,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto flex flex-col gap-12">
+      <section className="container mx-auto flex flex-col gap-12">
         <div className="self-stretch text-center">
           <span className="text-7xl text-primary-blue">Praha na dlani</span>
           <span className="text-7xl text-primary-blue-light">.</span>
@@ -332,7 +332,7 @@ export default function Home() {
         />
       </section>
 
-      <section className="mx-auto grid grid-cols-4 gap-6">
+      <section className="container mx-auto grid grid-cols-4 gap-6">
         <div className="flex flex-col justify-center gap-6 rounded-2xl border border-[#e9f4e4] bg-primary-blue p-6 shadow">
           <div className="text-4xl text-[#b4d6a5]">Zastavitelná plocha</div>
           <div className="text-lg text-white">Metropolitní plán</div>
@@ -388,7 +388,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid grid-cols-2 items-center justify-between gap-10">
+      <section className="container mx-auto grid grid-cols-2 items-center justify-between gap-10">
         <div className="flex flex-col gap-10">
           <div className="text-4xl font-bold leading-[1.5]">
             <span className="text-primary-blue-light">Srdce</span>
@@ -427,7 +427,7 @@ export default function Home() {
         />
       </section>
 
-      <section className="mx-auto grid grid-cols-2 items-center justify-between gap-10">
+      <section className="container mx-auto grid grid-cols-2 items-center justify-between gap-10">
         <div className="grid gap-12">
           <div className="text-center text-5xl text-primary-blue">
             Centrum na dosah
@@ -492,7 +492,7 @@ export default function Home() {
 
       <section
         data-layer="Hero Container"
-        className="HeroContainer inline-flex flex-col items-center justify-start gap-14 self-center"
+        className="HeroContainer container inline-flex flex-col items-center justify-start gap-14 self-center"
       >
         <div className="flex flex-col items-center justify-start gap-6 self-stretch">
           <div className="text-xl uppercase text-[#b4d6a5]">
@@ -500,7 +500,7 @@ export default function Home() {
           </div>
           <div className="self-stretch text-center">
             <span className="text-7xl font-bold text-primary-blue">
-              Příležitost, kterou mátejen jednou za život
+              Příležitost, kterou máte jen jednou za život
             </span>
             <span className="text-7xl font-bold text-primary-blue-light">
               .
@@ -513,7 +513,7 @@ export default function Home() {
         <Image src={Arrow} alt="" height={18} className="rotate-90" />
       </section>
 
-      <section className="mx-auto grid w-full grid-cols-2 gap-10 rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-12">
+      <section className="container mx-auto grid w-full grid-cols-2 gap-10 rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-12">
         <div className="flex flex-1 flex-col justify-between gap-6 text-white">
           <div>
             <div className="text-xl uppercase text-[#b4d6a5]">
@@ -590,7 +590,7 @@ export default function Home() {
       </section>
 
       <footer className="bg-primary-blue px-[120px] py-[68px]">
-        <div className="mx-auto max-w-[1220px]">
+        <div className="container mx-auto">
           <div className="my-8 grid grid-cols-5 gap-8">
             <div className="col-span-2 space-y-4 text-white">
               <a href="https://www.investujdopole.cz/">
