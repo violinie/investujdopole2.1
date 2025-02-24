@@ -13,7 +13,6 @@ import Facebook from "@/public/icon-social-fb.svg";
 import Instagram from "@/public/icon-social-ig.svg";
 import Linkedin from "@/public/icon-social-in.svg";
 import Graph from "@/public/graph.svg";
-import Rating from "@/public/rating-stars.svg";
 import Crow from "@/public/crow.svg";
 import TestimonialSlider from "../components/TestimonialSlider";
 
@@ -22,11 +21,7 @@ export default function Home() {
     <div className="flex flex-col gap-[120px]">
       <header className="container mx-auto flex w-full items-center justify-between p-6">
         <a href="https://www.investujdopole.cz/">
-          <Image
-            src={Logo}
-            alt="Logo Investuj do pole"
-            width={180}
-          />
+          <Image src={Logo} alt="Logo Investuj do pole" width={180} />
         </a>
         <nav>
           <ul className={"flex gap-10"}>
@@ -114,7 +109,10 @@ export default function Home() {
         </Btn>
       </section>
 
-      <section data-layer="Video" className="Video container self-center rounded-2xl">
+      <section
+        data-layer="Video"
+        className="Video container self-center rounded-2xl"
+      >
         {/*TODO VIDEO*/}
         <img
           className="rounded-2xl"
