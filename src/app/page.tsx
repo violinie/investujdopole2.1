@@ -1,6 +1,5 @@
 import Btn from "../components/Btn";
 import Image from "next/image";
-import Logo from "@/public/logo.svg";
 import LogoLight from "@/public/logo--white.svg";
 import Arrow from "@/public/icon-arrow.svg";
 import Tick from "@/public/icon-tick.svg";

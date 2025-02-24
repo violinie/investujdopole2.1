@@ -75,10 +75,6 @@ export function TestimonialSlider() {
   };
 
   const currentTestimonial = testimonials[currentIndex];
-  const prevIndex =
-    currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1;
-  const nextIndex =
-    currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1;
 
   return (
     <div className="flex flex-col items-center justify-center gap-4">
