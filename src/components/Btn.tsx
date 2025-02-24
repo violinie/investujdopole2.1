@@ -16,7 +16,7 @@ const Btn: React.FC<BtnProps> = ({
   return (
     <button
       className={cn(
-        "group flex items-center justify-center gap-1 rounded-full bg-gradient-to-b from-primary-blue to-primary-blue-light py-3 transition hover:from-primary-blue-light hover:to-primary-blue-light hover:shadow-lg",
+        "group whitespace-nowrap flex items-center justify-center gap-1 rounded-full bg-gradient-to-b from-primary-blue to-primary-blue-light py-3 transition hover:from-primary-blue-light hover:to-primary-blue-light hover:shadow-lg",
         {
           "gap-2 px-6 py-4": size === "lg",
           "pl-4 pr-5": iconPosition === "left",

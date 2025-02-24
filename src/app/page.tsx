@@ -15,64 +15,12 @@ import Linkedin from "@/public/icon-social-in.svg";
 import Graph from "@/public/graph.svg";
 import Crow from "@/public/crow.svg";
 import TestimonialSlider from "../components/TestimonialSlider";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-[120px]">
-      <header className="container mx-auto flex w-full items-center justify-between p-6">
-        <a href="https://www.investujdopole.cz/">
-          <Image src={Logo} alt="Logo Investuj do pole" width={180} />
-        </a>
-        <nav>
-          <ul className={"flex gap-10"}>
-            <li>
-              <a
-                href=""
-                className="text-muted-foreground text-base font-normal"
-              >
-                Vyjímečný pozemek
-              </a>
-            </li>
-            <li>
-              <a
-                href=""
-                className="text-muted-foreground text-base font-normal"
-              >
-                O nás
-              </a>
-            </li>
-            <li>
-              <a
-                href=""
-                className="text-muted-foreground text-base font-normal"
-              >
-                Reference
-              </a>
-            </li>
-            <li>
-              <a
-                href=""
-                className="text-muted-foreground text-base font-normal"
-              >
-                Kontakt
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <Btn
-          iconPosition="left"
-          icon={
-            <Image
-              src="/icon-flash.svg"
-              alt="Flash Icon"
-              width={22}
-              height={23}
-            />
-          }
-        >
-          Chci poslední pozemek
-        </Btn>
-      </header>
+      <Header></Header>
 
       <section
         data-layer="Hero Container"

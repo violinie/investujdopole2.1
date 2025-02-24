@@ -16,6 +16,7 @@ export default {
         "primary-blue": "var(--primary-blue)",
         "primary-blue-light": "var(--primary-blue-light)",
         "primary-green-light": "var(--primary-green-light)",
+        "muted-foreground": "var(--muted-foreground)",
       },
       fontFamily: {
         sans: ["var(--font-noto-sans)"],
