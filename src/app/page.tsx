@@ -14,12 +14,12 @@ import Instagram from "@/public/icon-social-ig.svg";
 import Linkedin from "@/public/icon-social-in.svg";
 import Graph from "@/public/graph.svg";
 import Crow from "@/public/crow.svg";
-import TestimonialSlider from "../components/TestimonialSlider";
+import { TestimonialSlider } from "../components/TestimonialSlider";
 import Header from "../components/Header";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-[120px]">
+    <div className="flex flex-col gap-20 lg:gap-28">
       <Header></Header>
 
       <section
@@ -28,15 +28,13 @@ export default function Home() {
       >
         <div className="flex flex-col items-center justify-start gap-6 self-stretch">
           <div className="self-stretch text-center">
-            <span className="text-7xl font-bold text-primary-blue">
+            <span className="text-5xl font-bold text-primary-blue lg:text-7xl">
               Poslední perla <br />
               trojských pozemků
-            </span>
-            <span className="text-7xl font-bold text-primary-blue-light">
-              .
+              <span className="text-primary-green-light">.</span>
             </span>
           </div>
-          <div className="text-muted-foreground text-center text-2xl">
+          <div className="text-muted-foreground text-center text-xl lg:text-2xl">
             Objevte jedinečnou příležitost vlastnit poslední pozemek
             <br /> této velikosti a exkluzivity v Praze-Troji.
           </div>
@@ -71,20 +69,20 @@ export default function Home() {
 
       <section
         data-layer="Social proof"
-        className="SocialProof container grid grid-cols-[1fr_1.4fr_1fr] gap-11 self-center"
+        className="SocialProof container grid grid-cols-2 gap-4 self-center md:items-center lg:grid-cols-[1fr_1.4fr_1fr] lg:gap-11"
       >
-        <div className="flex flex-col items-center justify-center gap-7 self-center self-baseline rounded-2xl bg-white p-10 shadow-xl">
+        <div className="flex flex-col items-center justify-center gap-7 rounded-2xl bg-white p-4 shadow-xl md:p-10">
           <div className="inline-flex items-start justify-start gap-10">
             <div className="inline-flex flex-col items-center justify-start gap-1.5">
               <div>
-                <span className="text-4xl font-black text-primary-blue">
+                <span className="text-2xl font-black text-primary-blue md:text-4xl">
                   20
                 </span>
-                <span className="font-['Noto Sans'] text-4xl font-black leading-10 text-primary-blue-light">
+                <span className="text-2xl font-black text-primary-blue-light md:text-4xl">
                   +
                 </span>
               </div>
-              <div className="text-sm font-normal text-[#636363]">
+              <div className="text-muted-foreground text-sm font-normal">
                 Let zkušeností
               </div>
             </div>
@@ -92,14 +90,14 @@ export default function Home() {
           <div className="inline-flex items-start justify-start gap-10">
             <div className="inline-flex flex-col items-center justify-start gap-1.5">
               <div>
-                <span className="text-4xl font-black text-primary-blue">
+                <span className="text-2xl font-black text-primary-blue md:text-4xl">
                   Top{" "}
                 </span>
-                <span className="font-['Noto Sans'] text-4xl font-black leading-10 text-primary-blue-light">
+                <span className="text-2xl font-black text-primary-blue-light md:text-4xl">
                   9
                 </span>
               </div>
-              <div className="text-sm font-normal text-[#636363]">
+              <div className="text-muted-foreground text-sm font-normal">
                 Realitní kancelář
               </div>
             </div>
@@ -107,14 +105,14 @@ export default function Home() {
           <div className="inline-flex items-start justify-start gap-10">
             <div className="inline-flex flex-col items-center justify-start gap-1">
               <div>
-                <span className="text-4xl font-black text-primary-blue">
+                <span className="text-2xl font-black text-primary-blue md:text-4xl">
                   5000
                 </span>
-                <span className="font-['Noto Sans'] text-4xl font-black leading-10 text-primary-blue-light">
+                <span className="text-2xl font-black text-primary-blue-light md:text-4xl">
                   +
                 </span>
               </div>
-              <div className="text-sm font-normal text-[#636363]">
+              <div className="text-muted-foreground text-sm font-normal">
                 Prodaných pozemků
               </div>
             </div>
@@ -129,10 +127,10 @@ export default function Home() {
             <Image src={Arrow} alt="" height={18} />
           </a>
         </div>
-        <div className="row-span-2 flex flex-col items-center justify-center gap-4 self-baseline rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-12 shadow-2xl">
+        <div className="order-first col-span-2 flex flex-col items-center justify-center gap-4 self-baseline rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-6 py-8 xl:p-12 shadow-2xl lg:order-none lg:col-span-1">
           <TestimonialSlider />
         </div>
-        <div className="flex flex-col items-center justify-center gap-8 self-center self-baseline rounded-2xl bg-white p-10 shadow-xl">
+        <div className="flex flex-col items-center justify-center gap-8 rounded-2xl bg-white p-4 shadow-xl md:p-10">
           <div className="inline-flex items-center justify-center gap-3.5">
             <div className="text-center text-xl font-normal text-primary-blue">
               Vývoj ceny pozemků
@@ -142,7 +140,7 @@ export default function Home() {
           <Image src={Graph} alt="" />
           <div className="inline-flex items-start justify-start gap-6">
             <div className="inline-flex flex-col items-center justify-start gap-1">
-              <div className="text-3xl font-extrabold text-primary-blue">
+              <div className="text-xl font-extrabold text-primary-blue md:text-3xl">
                 +50.4 %
               </div>
               <div className="text-xs font-medium text-[#636363]">
@@ -150,7 +148,7 @@ export default function Home() {
               </div>
             </div>
             <div className="inline-flex flex-col items-center justify-start gap-1">
-              <div className="text-3xl font-extrabold text-primary-blue">
+              <div className="text-xl font-extrabold text-primary-blue md:text-3xl">
                 5 let
               </div>
               <div className="text-xs font-medium text-[#636363]">
@@ -171,28 +169,28 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto flex flex-col items-center gap-12 text-center">
-        <div className="flex flex-col items-center gap-6">
-          <div className="text-xl text-[#b4d6a5]">Nepropásněte</div>
-          <div className="text-5xl font-bold text-primary-blue">
+        <div className="flex flex-col items-center gap-2 lg:gap-4">
+          <div className="text-xl text-primary-green-light">Nepropásněte</div>
+          <div className="text-3xl font-bold text-primary-blue lg:text-5xl">
             Výjimečný pozemek, výjimečná investice
           </div>
-          <div className="text-muted-foreground max-w-[580px] text-xl">
+          <div className="text-muted-foreground max-w-[580px] text-lg lg:text-xl">
             Tento pozemek o rozloze 6000 m<sup>2</sup> je poslední volnou
             plochou této velikosti v Praze-Troji.
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-8">
-          <div className="flex flex-col items-center">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-8">
+          <div className="col-span-2 flex flex-col items-center lg:col-span-1">
             <img
               src="https://placehold.jp/280x200.png"
-              className="rounded-2xl shadow"
+              className="w-full rounded-2xl text-5xl shadow"
               alt=""
             />
             <div className="mt-4">
-              <span className="block text-3xl font-bold text-primary-blue">
+              <span className="block text-2xl font-bold text-primary-blue sm:text-3xl">
                 Kouzlo přírody,
               </span>
-              <span className="text-xl text-primary-blue">
+              <span className="text-lg text-primary-blue md:text-xl">
                 kterou si zamilujete!
               </span>
             </div>
@@ -200,14 +198,14 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <img
               src="https://placehold.jp/280x200.png"
-              className="rounded-2xl shadow"
+              className="w-full rounded-2xl shadow"
               alt=""
             />
             <div className="mt-4">
-              <span className="block text-3xl font-bold text-primary-blue">
+              <span className="block text-2xl font-bold text-primary-blue md:text-3xl">
                 Bohatá historie,
               </span>
-              <span className="text-xl text-primary-blue">
+              <span className="text-lg text-primary-blue md:text-xl">
                 která vypráví příběhy.
               </span>
             </div>
@@ -219,10 +217,10 @@ export default function Home() {
               alt=""
             />
             <div className="mt-4">
-              <span className="block text-3xl font-bold text-primary-blue">
+              <span className="block text-2xl font-bold text-primary-blue md:text-3xl">
                 Luxusní lokalita
               </span>
-              <span className="text-xl text-primary-blue">
+              <span className="text-lg text-primary-blue md:text-xl">
                 jen pár kroků od centra!
               </span>
             </div>
@@ -268,8 +266,12 @@ export default function Home() {
 
       <section className="container mx-auto flex flex-col gap-12">
         <div className="self-stretch text-center">
-          <span className="text-7xl text-primary-blue">Praha na dlani</span>
-          <span className="text-7xl text-primary-blue-light">.</span>
+          <span className="text-5xl text-primary-blue lg:text-7xl">
+            Praha na dlani
+          </span>
+          <span className="text-5xl text-primary-green-light lg:text-7xl">
+            .
+          </span>
         </div>
         <img
           src="https://placehold.jp/1200x440.png"
@@ -278,12 +280,16 @@ export default function Home() {
         />
       </section>
 
-      <section className="container mx-auto grid grid-cols-4 gap-6">
+      <section className="container mx-auto grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
         <div className="flex flex-col justify-center gap-6 rounded-2xl border border-[#e9f4e4] bg-primary-blue p-6 shadow">
-          <div className="text-4xl text-[#b4d6a5]">Zastavitelná plocha</div>
-          <div className="text-lg text-white">Metropolitní plán</div>
+          <div className="text-2xl font-medium text-[#b4d6a5] lg:text-4xl">
+            Zastavitelná plocha
+          </div>
+          <div className="text-base text-white lg:text-lg">
+            Metropolitní plán
+          </div>
         </div>
-        <div className="flex flex-col gap-6 rounded-2xl border border-[#e9f4e4] bg-[#e9f4e4] p-6 shadow">
+        <div className="flex flex-col gap-6 rounded-2xl border border-[#e9f4e4] bg-[#e9f4e4] p-4 shadow lg:p-6">
           <div className="relative ml-auto h-14 w-14 rounded-full border border-[#e9f4e4] bg-primary-blue" />
           <div
             data-svg-wrapper
@@ -292,17 +298,17 @@ export default function Home() {
             {/* TODO svg */}
           </div>
           <div>
-            <div className="text-4xl text-[#86b870]">
-              <span className="text-4xl text-primary-blue">6 055</span>
+            <div className="text-2xl text-[#86b870] lg:text-4xl">
+              <span className="text-primary-blue">6 055</span>
               <span> m</span>
               <sup>2</sup>
             </div>
-            <div className="text-lg text-primary-blue">
+            <div className="text-base text-primary-blue lg:text-lg">
               Celková výměra pozemků
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-6 rounded-2xl border border-[#e9f4e4] bg-[#e9f4e4] p-6 shadow">
+        <div className="flex flex-col gap-6 rounded-2xl border border-[#e9f4e4] bg-[#e9f4e4] p-4 shadow lg:p-6">
           <div className="relative ml-auto h-14 w-14 rounded-full border border-[#e9f4e4] bg-primary-blue" />
           <div
             data-svg-wrapper
@@ -311,13 +317,13 @@ export default function Home() {
             {/* TODO svg */}
           </div>
           <div>
-            <div className="text-4xl text-primary-blue">Troja</div>
-            <div className="text-lg text-primary-blue">
+            <div className="text-2xl text-primary-blue lg:text-4xl">Troja</div>
+            <div className="text-base text-primary-blue">
               Pražská luxusní lokalita
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-6 rounded-2xl border border-[#e9f4e4] bg-[#e9f4e4] p-6 shadow">
+        <div className="flex flex-col gap-6 rounded-2xl border border-[#e9f4e4] bg-[#e9f4e4] p-4 shadow lg:p-6">
           <div className="relative ml-auto h-14 w-14 rounded-full border border-[#e9f4e4] bg-primary-blue" />
           <div
             data-svg-wrapper
@@ -326,15 +332,17 @@ export default function Home() {
             {/* TODO svg */}
           </div>
           <div>
-            <div className="text-4xl text-primary-blue">Výstavba RD</div>
-            <div className="text-lg text-primary-blue">
+            <div className="text-2xl text-primary-blue lg:text-4xl">
+              Výstavba RD
+            </div>
+            <div className="text-base text-primary-blue lg:text-lg">
               Poslední v této lokalitě
             </div>
           </div>
         </div>
       </section>
 
-      <section className="container mx-auto grid grid-cols-2 items-center justify-between gap-10">
+      <section className="container mx-auto grid items-center justify-between gap-10 lg:grid-cols-2">
         <div className="flex flex-col gap-10">
           <div className="text-4xl font-bold leading-[1.5]">
             <span className="text-primary-blue-light">Srdce</span>
@@ -373,8 +381,8 @@ export default function Home() {
         />
       </section>
 
-      <section className="container mx-auto grid grid-cols-2 items-center justify-between gap-10">
-        <div className="grid gap-12">
+      <section className="container mx-auto grid items-center justify-between gap-10 lg:grid-cols-2">
+        <div className="grid gap-4 lg:gap-12">
           <div className="text-center text-5xl text-primary-blue">
             Centrum na dosah
             <span className="text-5xl text-primary-blue-light">.</span>
@@ -385,7 +393,7 @@ export default function Home() {
             alt=""
           />
         </div>
-        <div className="grid gap-12">
+        <div className="grid gap-4 lg:gap-12">
           <div className="text-center text-5xl text-primary-blue">
             Božský klid
             <span className="text-5xl text-primary-blue-light">.</span>
@@ -398,7 +406,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col justify-center gap-16 bg-primary-blue py-16 text-center">
+      <section className="flex flex-col justify-center bg-primary-blue px-4 py-16 text-center lg:gap-16">
         <div className="grid gap-6">
           <div className="text-5xl">
             <span className="text-white">5 000</span>
@@ -411,10 +419,10 @@ export default function Home() {
             přístup. Vaše důvěra nás motivuje být stále lepšími.
           </div>
         </div>
-        <div className="grid grid-cols-[1fr_1fr_1fr] items-end justify-items-center gap-11 self-center">
+        <div className="grid grid-cols-[1fr_1fr_1fr] items-end justify-items-center gap-4 self-center lg:gap-10">
           <img
             src="https://placehold.jp/290x510.png"
-            className="max-h-[460px] rounded-2xl"
+            className="max-h-[460px] rounded-2xl border-[3px] border-transparent"
             alt=""
           />
           <img
@@ -424,7 +432,7 @@ export default function Home() {
           />
           <img
             src="https://placehold.jp/290x510.png"
-            className="max-h-[460px] rounded-2xl"
+            className="max-h-[460px] rounded-2xl border-[3px] border-transparent"
             alt=""
           />
         </div>
@@ -438,46 +446,46 @@ export default function Home() {
 
       <section
         data-layer="Hero Container"
-        className="HeroContainer container inline-flex flex-col items-center justify-start gap-14 self-center"
+        className="HeroContainer container inline-flex flex-col items-center justify-start gap-8 self-center lg:gap-14"
       >
-        <div className="flex flex-col items-center justify-start gap-6 self-stretch">
-          <div className="text-xl uppercase text-[#b4d6a5]">
+        <div className="flex flex-col items-center justify-start gap-2 self-stretch lg:gap-6">
+          <div className="text-lg uppercase text-[#b4d6a5] lg:text-xl">
             Nepropásněte to!
           </div>
           <div className="self-stretch text-center">
-            <span className="text-7xl font-bold text-primary-blue">
+            <span className="text-3xl font-bold text-primary-blue md:text-5xl lg:text-7xl">
               Příležitost, kterou máte jen jednou za život
             </span>
-            <span className="text-7xl font-bold text-primary-blue-light">
+            <span className="text-3xl font-bold text-primary-blue-light md:text-5xl lg:text-7xl">
               .
             </span>
           </div>
         </div>
-        <div className="text-muted-foreground text-center text-2xl">
+        <div className="text-muted-foreground text-center text-lg lg:text-2xl">
           Domluvte si prohlídku této výjimečné investiční příležitosti.
         </div>
         <Image src={Arrow} alt="" height={18} className="rotate-90" />
       </section>
 
-      <section className="container mx-auto grid w-full grid-cols-2 gap-10 rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-12">
+      <section className="container mx-auto grid w-full gap-10 rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-6 md:p-12 lg:grid-cols-2">
         <div className="flex flex-1 flex-col justify-between gap-6 text-white">
           <div>
-            <div className="text-xl uppercase text-[#b4d6a5]">
+            <div className="text-lg uppercase text-[#b4d6a5] md:text-xl">
               Váš realitní makléř
             </div>
-            <div className="text-7xl text-white">
-              Bc. František <br />
-              Šťastník<span className="text-7xl text-[#b4d6a5]">.</span>
+            <div className="text-3xl text-white md:text-5xl xl:text-7xl">
+              Bc. František <br className="hidden md:block" />
+              Šťastník<span className="text-[#b4d6a5]">.</span>
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col items-start gap-4">
               <div className="flex items-center gap-3">
                 <Image src={Mail} alt="" />
                 <a href="mailto:frantisek.stastnik@investujdopole.cz">
                   frantisek.stastnik@investujdopole.cz
                 </a>
               </div>
-              <div className="inline-flex items-center justify-start gap-3.5 rounded-xl border-2 border-[#b4d6a5] bg-[#b4d6a5]/50 py-5 pl-5 pr-52">
+              <div className="inline-flex items-center justify-start gap-3.5 rounded-xl border-2 border-[#b4d6a5] bg-[#b4d6a5]/50 px-5 py-5">
                 <Image src={Phone} alt="" />
                 <a href="tel:+420775972405">+420 775 972 405</a>
               </div>
@@ -499,8 +507,8 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="flex flex-col gap-6 rounded-2xl bg-white p-8 text-primary-blue shadow-md">
-          <h3 className="text-5xl font-bold text-primary-blue">
+        <div className="flex flex-col gap-6 rounded-2xl bg-white p-6 text-primary-blue shadow-md lg:p-8">
+          <h3 className="text-3xl font-bold text-primary-blue lg:text-5xl">
             Kontaktujte mě.
           </h3>
           <input
@@ -535,7 +543,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-primary-blue px-[120px] py-[68px]">
+      <footer className="bg-primary-blue py-4">
         <div className="container mx-auto">
           <div className="my-8 grid grid-cols-5 gap-8">
             <div className="col-span-2 space-y-4 text-white">
@@ -553,66 +561,77 @@ export default function Home() {
                 <span className="text-[#b4d6a5]">+420</span> 775 972 405
               </a>
             </div>
-            <ul className="grid gap-6">
+            <ul className="grid gap-1">
               <li className="text-lg text-white">O společnosti.</li>
               <li>
-                <a href="" className="text-[#afbbd4]">
+                <a href="" className="block py-2 text-[#afbbd4]">
                   O nás
                 </a>
               </li>
               <li>
-                <a href="" className="text-[#afbbd4]">
+                <a href="" className="block py-2 text-[#afbbd4]">
                   Naše nabídka
                 </a>
               </li>
               <li>
-                <a href="" className="text-[#afbbd4]">
+                <a href="" className="block py-2 text-[#afbbd4]">
                   Kontakt
                 </a>
               </li>
             </ul>
-            <ul className="grid gap-6">
+            <ul className="grid gap-1">
               <li className="text-lg text-white">Vzdělávání.</li>
               <li>
-                <a href="" className="text-[#afbbd4]">
+                <a href="" className="block py-2 text-[#afbbd4]">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="" className="text-[#afbbd4]">
+                <a href="" className="block py-2 text-[#afbbd4]">
                   Webinář
                 </a>
               </li>
               <li>
-                <a href="" className="text-[#afbbd4]">
+                <a href="" className="block py-2 text-[#afbbd4]">
                   Newsletter
                 </a>
               </li>
             </ul>
-            <ul className="grid gap-6">
+            <ul className="grid gap-1">
               <li className="text-lg text-white">Sledujte nás.</li>
               <li>
-                <a href="" className="text-[#afbbd4]">
+                <a href="" className="block py-2 text-[#afbbd4]">
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="" className="text-[#afbbd4]">
+                <a href="" className="block py-2 text-[#afbbd4]">
                   Facebook
                 </a>
               </li>
               <li>
-                <a href="" className="text-[#afbbd4]">
+                <a href="" className="block py-2 text-[#afbbd4]">
                   Instagram
                 </a>
               </li>
             </ul>
           </div>
-          <div className="flex justify-between border-t border-slate-600 pt-4">
-            <div className="text-white">
-              <a href="https://www.investujdopole.cz/">Investujdopole.cz</a>|
-              <a href="">Zásady ochrany osobních údajů (GDPR)</a>|
-              <a href="">Zásady cookies</a>
+          <div className="flex justify-between gap-4 border-t border-slate-600 pt-4">
+            <div className="flex gap-2 text-white">
+              <a
+                href="https://www.investujdopole.cz/"
+                className="hover:underline"
+              >
+                Investujdopole.cz
+              </a>
+              <span className="text-muted-foreground">|</span>
+              <a href="#" className="hover:underline">
+                Zásady ochrany osobních údajů (GDPR)
+              </a>
+              <span className="text-muted-foreground">|</span>
+              <a href="#" className="hover:underline">
+                Zásady cookies
+              </a>
             </div>
             <div className="text-[#afbbd4]">© Investujdopole s.r.o., 2025</div>
           </div>

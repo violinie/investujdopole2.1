@@ -11,46 +11,64 @@ interface Testimonial {
   name: string;
   text: string;
   rating: number;
-  image: string;
 }
 
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Dagmar",
-    text: "Spolupráce s Investujdopole.cz byla pro mě příjemnou a profesionální zkušeností. Oceňuji především jejich lidský přístup, férové jednání a schopnost srozumitelně vysvětlit celý proces obchodu s pozemky.",
-    rating: 4.5,
-    image: "https://picsum.photos/seed/3/100",
+    name: "Milan Suk",
+    text: "Děkuji panu Bc. Františku Šťastníkovi za rychlé a seriózní jednání při prodeji pozemků a lesa. Byl jsem s touto firmou velmi spokojen.",
+    rating: 5,
   },
   {
     id: 2,
-    name: "Jan",
-    text: "Velmi profesionální přístup a skvělá komunikace. Celý proces nákupu pozemku proběhl hladce a bez komplikací. Doporučuji všem, kdo hledají spolehlivého partnera pro investice do pozemků.",
-    rating: 5.0,
-    image: "https://picsum.photos/seed/2/100",
+    name: "Jaroslav Turay",
+    text: "Děkuji panu Šťastníkovi za jeho skvělý a profesionální přístup. Rychlý prodej pozemků a jeho zájem o všechny kroky spojené s prodejem mě velmi mile překvapily. Mohu jen doporučit.",
+    rating: 5,
   },
   {
     id: 3,
-    name: "Marie",
-    text: "Díky Investujdopole.cz jsem našla perfektní pozemek pro svůj projekt. Jejich expertíza v oblasti realit a individuální přístup ke klientům jsou skutečně na vysoké úrovni.",
-    rating: 4.8,
-    image: "https://picsum.photos/seed/1/100",
+    name: "Petr Holub",
+    text: "Děkuji panu Šťastníkovi, že si dokázal poradit, i když situace byla komplikovaná.",
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: "Kateřina Nováková",
+    text: "Se službami pana Šťastníka a společnosti Investuj do pole jsme byli spokojeni. Jednání bylo transparentní a vstřícné, byla zde velká snaha vyhovět našim požadavkům a najít pro nás vhodné řešení. Oceňuji, že nás pan Šťastník průběžně informoval o situaci a věnoval pozornost našim připomínkám a návrhům. Pokud hledáte spolehlivého, poctivého a příjemně vystupujícího zprostředkovatele, pak Vám pana Šťastníka doporučuji.",
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: "Jitka Rázová",
+    text: "Děkujeme panu Františku Šťastníkovi za rychlé vyřízení prodeje polí. Až se dohodneme na dalším prodeji, tak oslovíme vaši firmu. Ještě jednou moc děkujeme. Rázová, Rokosová",
+    rating: 5,
+  },
+  {
+    id: 6,
+    name: "Honza Vonasek",
+    text: "Bezproblémová spolupráce, pan Šťastník nám vyšel vstříc a vše probíhalo dobře. Mohu doporučit.",
+    rating: 4,
+  },
+  {
+    id: 7,
+    name: "Otto Forman",
+    text: "S jednáním, přípravou i realizací obchodu (koupě 7 ha zemědělských pozemků) zprostředkovaného panem Bc. Františkem Šťastníkem (Investujdopole.cz s.r.o.) jsem byl plně spokojen. K oboustranné spokojenosti byly vyřešeny a dohodnuty i nestandardní požadavky účastníků obchodu. Firmu a především makléře pana Šťastníka mohu jen doporučit.",
+    rating: 5,
   },
 ];
 
-export default function TestimonialSlider() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
+
+export function TestimonialSlider() {
+  const [currentIndex, setCurrentIndex] = useState(3);
 
   const nextTestimonial = () => {
-    setDirection(1);
     setCurrentIndex((prevIndex) =>
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   const previousTestimonial = () => {
-    setDirection(-1);
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1,
     );
@@ -64,81 +82,59 @@ export default function TestimonialSlider() {
 
   return (
     <div className="flex flex-col items-center justify-center gap-4">
-      <div className="inline-flex items-center justify-center gap-4">
-        <button type="button" onClick={previousTestimonial}>
+      <div className="flex w-full items-center justify-between gap-4">
+        <motion.button
+          type="button"
+          onClick={previousTestimonial}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.95 }}
+        >
           <Image
             src={Arrow}
             alt="Přechozí"
-            height={22}
+            height={20}
             className="rotate-180"
           />
           <span className="sr-only">Předchozí</span>
-        </button>
+        </motion.button>
 
-        <div className="relative">
-          <div className="flex items-center">
-            <motion.img
-              initial={{ scale: 0.8, x: 20, y: -10, opacity: 0.5 }}
-              animate={{ scale: 1, x: 0, y: 0, opacity: 1 }}
-              transition={{
-                duration: 0.4,
-                ease: "easeOut",
-                delay: direction === 1 ? 0 : 0.2,
-              }}
-              src={testimonials[prevIndex].image}
-              className="-mr-8 size-20 rounded-full border-2 border-white shadow-xl"
-              alt={testimonials[prevIndex].name}
-            />
-            <motion.img
-              key={currentIndex}
-              initial={{ scale: 0.8, x: direction * 40, opacity: 1 }}
-              animate={{ scale: 1, x: 0, opacity: 1 }}
-              transition={{
-                duration: 0.4,
-                ease: "easeOut",
-                delay: 0.1,
-              }}
-              className="z-10 size-32 rounded-full border-2 border-white shadow-xl"
-              src={currentTestimonial.image}
-              alt={currentTestimonial.name}
-            />
-            <motion.img
-              initial={{ scale: 0.8, x: -20, y: -10, opacity: 0.5 }}
-              animate={{ scale: 1, x: 0, y: 0, opacity: 1 }}
-              transition={{
-                duration: 0.4,
-                ease: "easeOut",
-                delay: direction === -1 ? 0 : 0.2,
-              }}
-              src={testimonials[nextIndex].image}
-              className="-ml-8 size-20 rounded-full border-2 border-white shadow-xl"
-              alt={testimonials[nextIndex].name}
-            />
-          </div>
-        </div>
+        <motion.div
+          key={currentTestimonial.id}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-2xl text-white"
+        >
+          {currentTestimonial.name}
+        </motion.div>
 
-        <button type="button" onClick={nextTestimonial}>
-          <Image src={Arrow} alt="Další" height={22} />
+        <motion.button
+          type="button"
+          onClick={nextTestimonial}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Image src={Arrow} alt="Další" height={20} />
           <span className="sr-only">Další</span>
-        </button>
+        </motion.button>
       </div>
 
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
-          initial={{ opacity: 0, x: direction * 60 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: direction * -60 }}
-          transition={{ duration: 0.3 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
           className="flex flex-col items-center gap-4"
         >
-          <div className="text-2xl text-white">{currentTestimonial.name}</div>
           <div className="self-stretch text-center text-base text-white">
             {currentTestimonial.text}
           </div>
           <div className="inline-flex items-center justify-center gap-4">
             <div>
-              <span className="text-xl text-white">
+              <span className="text-xl text-white h-auto transition-all">
                 {currentTestimonial.rating}
               </span>
               <span className="text-xs font-normal text-[#b4d6a5]">
@@ -156,9 +152,9 @@ export default function TestimonialSlider() {
         href=""
         className="inline-flex items-center justify-center gap-2.5 p-1.5"
       >
-        <div className="text-sm font-normal text-white">
+        <span className="text-sm font-normal text-white">
           Zobrazit všechny recenze
-        </div>
+        </span>
         <Image src={Arrow} alt="" height={18} />
       </motion.a>
     </div>

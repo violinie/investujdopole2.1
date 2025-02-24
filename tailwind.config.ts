@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
   content: [
@@ -9,7 +10,14 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
+      screens: {
+        sm: "100%",
+        md: "640px",
+        lg: "768px",
+        xl: "1024px",
+        "2xl": "1280px",
+      },
     },
     extend: {
       colors: {
