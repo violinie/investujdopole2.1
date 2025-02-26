@@ -56,7 +56,7 @@ export default function Home() {
         </Btn>
       </section>
 
-      <div className="overflow-hidden">
+      <div className="overflow-hidden relative lg:-mt-12">
         <section
           data-layer="Video"
           className="Video group container flex justify-center"
