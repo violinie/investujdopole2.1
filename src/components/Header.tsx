@@ -4,7 +4,7 @@ import Logo from "@/public/logo.svg";
 import Btn from "./Btn";
 import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function Header() {
   const [isMobile, setIsMobile] = useState(false);
@@ -38,7 +38,12 @@ export default function Header() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <Image src={Logo} alt="Logo Investuj do pole" width={180} />
+          <Image
+            src={Logo}
+            alt="Logo Investuj do pole"
+            width={240}
+            className="w-40 sm:w-44 lg:w-60"
+          />
         </motion.a>
         {(!isMobile || mobileNavOpen) && (
           <motion.nav
@@ -53,7 +58,7 @@ export default function Header() {
               },
             )}
           >
-            <ul className="text-muted-foreground mx-auto flex flex-col items-center gap-2 text-center text-base font-normal lg:flex-row">
+            <ul className="mx-auto flex flex-col items-center gap-2 text-center text-base font-normal text-muted-foreground lg:flex-row">
               <li>
                 <a href="#" className="block p-3 hover:text-gray-900">
                   Vyjímečný pozemek

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import Arrow from "@/public/icon-arrow.svg";
 import Rating from "@/public/rating-stars.svg";
 
