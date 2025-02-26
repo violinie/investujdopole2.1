@@ -456,12 +456,12 @@ export default function Home() {
         <Image
           src={ThumbUp}
           alt="ThumbUp"
-          className="absolute left-0 top-1/4 size-44 w-auto"
+          className="absolute left-0 top-1/4 size-32 md:size-44 w-auto"
         />
         <Image
           src={ThumbUp}
           alt="ThumbUp"
-          className="absolute bottom-1/4 right-0 size-44 w-auto"
+          className="absolute bottom-1/4 right-0 size-32 md:size-44 w-auto"
           style={{ transform: "scaleX(-1)" }}
         />
         <Image
@@ -505,7 +505,7 @@ export default function Home() {
         </div>
         <a
           href="https://www.firmy.cz/detail/13625165#hodnoceni"
-          className="mt-6 sm:mt-8"
+          className="mt-6 sm:mt-8 relative"
         >
           <div className="text-base text-white sm:text-lg">
             Prohlédnout všechny reference
