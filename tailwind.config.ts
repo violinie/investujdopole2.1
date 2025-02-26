@@ -31,5 +31,16 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }: { addUtilities: (utilities: Record<string, any>) => void }) {
+      addUtilities({
+        '.text-primary-gradient': {
+          backgroundImage: 'radial-gradient(circle at center, var(--primary-blue-light), var(--primary-blue))',
+          WebkitBackgroundClip: 'text',
+          backgroundClip: 'text',
+          color: 'transparent',
+        },
+      })
+    },
+  ],
 } satisfies Config;

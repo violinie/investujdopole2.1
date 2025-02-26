@@ -58,7 +58,6 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-
 export function TestimonialSlider() {
   const [currentIndex, setCurrentIndex] = useState(3);
 
@@ -130,7 +129,7 @@ export function TestimonialSlider() {
           </div>
           <div className="inline-flex items-center justify-center gap-4">
             <div>
-              <span className="text-xl text-white h-auto transition-all">
+              <span className="h-auto text-xl text-white transition-all">
                 {currentTestimonial.rating}
               </span>
               <span className="text-xs font-normal text-[#b4d6a5]">
@@ -145,7 +144,7 @@ export function TestimonialSlider() {
       <motion.a
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        href=""
+        href="https://www.firmy.cz/detail/13625165#hodnoceni"
         className="inline-flex items-center justify-center gap-2.5 p-1.5"
       >
         <span className="text-sm font-normal text-white">

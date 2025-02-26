@@ -11,15 +11,23 @@ import Location from "@/public/icon-location.svg";
 import Facebook from "@/public/icon-social-fb.svg";
 import Instagram from "@/public/icon-social-ig.svg";
 import Linkedin from "@/public/icon-social-in.svg";
+import Feature1 from "@/public/images/features-1.jpg";
+import Feature2 from "@/public/images/features-2.jpg";
+import Feature3 from "@/public/images/features-3.jpg";
+import Praha from "@/public/images/pozemek-top.jpg";
+import Salesman from "@/public/images/salesman.png";
+import Elipse from "@/public/images/elipse.svg";
+import Elipse2 from "@/public/images/elipse-2.svg";
 import Graph from "@/public/graph.svg";
 import Crow from "@/public/crow.svg";
+import ThumbUp from "@/public/images/thumb-up-dynamic-clay.png";
 import { TestimonialSlider } from "../components/TestimonialSlider";
 import Header from "../components/Header";
 import { VideoReveal } from "../components/VideoReveal";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-12 md:gap-16 lg:gap-28">
+    <div className="flex flex-col gap-20 lg:gap-28">
       <Header></Header>
 
       <section
@@ -28,7 +36,7 @@ export default function Home() {
       >
         <div className="flex flex-col items-center justify-start gap-4 self-stretch md:gap-6">
           <div className="self-stretch text-center">
-            <span className="text-3xl font-bold text-primary-blue sm:text-4xl md:text-5xl lg:text-7xl">
+            <span className="text-primary-gradient text-3xl font-bold sm:text-4xl md:text-5xl lg:text-7xl">
               Poslední perla <br />
               trojských pozemků
               <span className="text-primary-green-light">.</span>
@@ -56,12 +64,11 @@ export default function Home() {
         </Btn>
       </section>
 
-      <div className="overflow-hidden relative lg:-mt-12">
+      <div className="relative overflow-hidden lg:-mt-12">
         <section
           data-layer="Video"
           className="Video group container flex justify-center"
         >
-          {/*TODO VIDEO*/}
           <VideoReveal />
         </section>
       </div>
@@ -116,7 +123,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <a
+          {/*<a
             href="#"
             className="inline-flex items-center justify-center gap-2.5 p-1.5"
           >
@@ -124,7 +131,7 @@ export default function Home() {
               Více o Investuj do pole
             </div>
             <Image src={Arrow} alt="" height={18} />
-          </a>
+          </a>*/}
         </div>
         <div className="order-first flex flex-col items-center justify-center gap-4 self-baseline rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-6 py-8 shadow-2xl sm:col-span-2 lg:order-none lg:col-span-1 xl:p-12">
           <TestimonialSlider />
@@ -155,6 +162,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/*}
           <a
             href="#"
             className="inline-flex items-center justify-center gap-2.5 p-1.5"
@@ -163,7 +171,7 @@ export default function Home() {
               Bližší informace
             </div>
             <Image src={Arrow} alt="" height={18} />
-          </a>
+          </a>*/}
         </div>
       </section>
 
@@ -172,7 +180,7 @@ export default function Home() {
           <div className="text-lg text-primary-green-light sm:text-xl">
             Nepropásněte
           </div>
-          <div className="text-2xl font-bold text-primary-blue sm:text-3xl lg:text-5xl">
+          <div className="text-primary-gradient text-2xl font-bold sm:text-3xl lg:text-5xl">
             Výjimečný pozemek, výjimečná investice
           </div>
           <div className="max-w-[580px] text-base text-muted-foreground sm:text-lg lg:text-xl">
@@ -182,10 +190,10 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           <div className="flex flex-col items-center sm:col-span-2 lg:col-span-1">
-            <img
-              src="https://placehold.jp/280x200.png"
+            <Image
+              src={Feature1}
               className="w-full rounded-2xl text-5xl shadow"
-              alt=""
+              alt="Kouzlo přírody"
             />
             <div className="mt-4">
               <span className="block text-xl font-bold text-primary-blue sm:text-2xl sm:text-3xl">
@@ -197,10 +205,10 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <img
-              src="https://placehold.jp/280x200.png"
+            <Image
+              src={Feature2}
               className="w-full rounded-2xl shadow"
-              alt=""
+              alt="Bohatá historie"
             />
             <div className="mt-4">
               <span className="block text-xl font-bold text-primary-blue sm:text-2xl md:text-3xl">
@@ -212,10 +220,10 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <img
-              src="https://placehold.jp/280x200.png"
+            <Image
+              src={Feature3}
               className="w-full rounded-2xl shadow"
-              alt=""
+              alt="Luxusní lokalita"
             />
             <div className="mt-4">
               <span className="block text-xl font-bold text-primary-blue sm:text-2xl md:text-3xl">
@@ -237,10 +245,34 @@ export default function Home() {
         </Btn>
       </section>
 
-      <section className="container mx-auto flex max-w-[780px] flex-col items-center gap-4 rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-6 px-4 text-center sm:gap-6 sm:p-8 sm:px-6">
-        <Image src={Crow} alt="" className="h-12 w-12 sm:h-16 sm:w-16" />
-        <div>
-          <h2 className="text-2xl font-bold text-white sm:text-3xl">
+      <section className="container relative mx-auto flex max-w-[800px] flex-col items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light px-4 py-6 text-center sm:gap-8 sm:px-10 sm:py-10">
+        <Image
+          src={Crow}
+          alt="Ikonka korunky"
+          className="size-12 sm:h-16 sm:w-16"
+        />
+        <Image
+          src={Elipse}
+          alt="Elipse"
+          className="absolute right-0 top-0 h-full w-auto"
+        />
+        <Image
+          src={Crow}
+          alt="Ikonka korunky"
+          className="absolute left-[10%] top-10 size-24 rotate-12 opacity-50 blur-sm"
+        />
+        <Image
+          src={Crow}
+          alt="Ikonka korunky"
+          className="absolute right-[15%] top-4 size-28 -rotate-12 opacity-50 blur-sm"
+        />
+        <Image
+          src={Crow}
+          alt="Ikonka korunky"
+          className="absolute bottom-0 right-0 size-40 rotate-12 opacity-30 blur"
+        />
+        <div className="relative">
+          <h2 className="text-2xl font-bold text-white sm:text-4xl">
             Staňte se majitelem této trofejní nemovitosti
             <br className="hidden sm:block" />
             <span className="mt-2 block text-lg font-normal text-white sm:inline sm:text-xl">
@@ -249,7 +281,7 @@ export default function Home() {
             </span>
           </h2>
         </div>
-        <div className="flex w-full flex-col justify-between gap-4 sm:flex-row sm:gap-8">
+        <div className="relative flex w-full flex-col justify-between gap-4 sm:flex-row sm:gap-8">
           <div className="flex items-center gap-3">
             <Image src={Tick} alt="" />
             <span className="text-base text-white sm:text-lg">
@@ -271,32 +303,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto flex flex-col gap-8 px-4 sm:gap-12 sm:px-6">
+      <section className="container mx-auto flex flex-col gap-8 px-4 sm:px-6">
         <div className="self-stretch text-center">
-          <span className="text-3xl text-primary-blue sm:text-4xl md:text-5xl lg:text-7xl">
-            Praha na dlani
+          <span className="text-primary-gradient text-3xl font-bold sm:text-4xl md:text-5xl lg:text-7xl">
+            Jedinečný pozemek
           </span>
           <span className="text-3xl text-primary-green-light sm:text-4xl md:text-5xl lg:text-7xl">
             .
           </span>
         </div>
-        <img
-          src="https://placehold.jp/1200x440.png"
+        <Image
+          src={Praha}
           className="w-full rounded-2xl shadow-xl"
-          alt=""
+          alt="Praha na dlani"
         />
       </section>
 
       <section className="container mx-auto grid grid-cols-2 gap-4 px-4 sm:px-6 lg:grid-cols-4 lg:gap-6">
-        <div className="flex flex-col justify-center gap-4 rounded-2xl border border-[#e9f4e4] bg-primary-blue p-4 shadow sm:gap-6 sm:p-6">
-          <div className="text-xl font-medium text-[#b4d6a5] sm:text-2xl lg:text-4xl">
+        <div className="relative flex flex-col justify-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-4 shadow sm:gap-6 xl:p-6">
+          <Image
+            src={Elipse2}
+            alt="Elipse"
+            className="absolute right-0 top-0 h-full w-auto"
+          />
+          <div className="relative text-xl font-medium text-[#b4d6a5] sm:text-2xl xl:text-4xl">
             Zastavitelná plocha
           </div>
-          <div className="text-sm text-white sm:text-base lg:text-lg">
+          <div className="relative text-sm text-white sm:text-base xl:text-lg">
             Metropolitní plán
           </div>
         </div>
-        <div className="flex flex-col gap-4 rounded-2xl border border-[#e9f4e4] bg-[#e9f4e4] p-4 shadow sm:gap-6 lg:p-6">
+        <div className="flex flex-col gap-4 rounded-2xl border border-[#e9f4e4] bg-[#e9f4e4] p-4 shadow sm:gap-6 xl:p-6">
           <div className="relative ml-auto h-10 w-10 rounded-full border border-[#e9f4e4] bg-primary-blue sm:h-14 sm:w-14" />
           <div
             data-svg-wrapper
@@ -304,18 +341,18 @@ export default function Home() {
           >
             {/* TODO svg */}
           </div>
-          <div>
-            <div className="text-xl text-[#86b870] sm:text-2xl lg:text-4xl">
+          <div className="flex flex-col gap-2">
+            <div className="text-xl font-semibold text-[#86b870] sm:text-2xl xl:text-4xl">
               <span className="text-primary-blue">6 055</span>
               <span> m</span>
               <sup>2</sup>
             </div>
-            <div className="text-sm text-primary-blue sm:text-base lg:text-lg">
+            <div className="text-sm font-medium text-primary-blue sm:text-base xl:text-lg">
               Celková výměra pozemků
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-4 rounded-2xl border border-[#e9f4e4] bg-[#e9f4e4] p-4 shadow sm:gap-6 lg:p-6">
+        <div className="flex flex-col gap-4 rounded-2xl border border-[#e9f4e4] bg-[#e9f4e4] p-4 shadow sm:gap-6 xl:p-6">
           <div className="relative ml-auto h-10 w-10 rounded-full border border-[#e9f4e4] bg-primary-blue sm:h-14 sm:w-14" />
           <div
             data-svg-wrapper
@@ -323,16 +360,16 @@ export default function Home() {
           >
             {/* TODO svg */}
           </div>
-          <div>
-            <div className="text-xl text-primary-blue sm:text-2xl lg:text-4xl">
+          <div className="flex flex-col gap-2">
+            <div className="text-xl font-semibold text-primary-blue sm:text-2xl xl:text-4xl">
               Troja
             </div>
-            <div className="text-sm text-primary-blue sm:text-base">
+            <div className="text-sm font-medium text-primary-blue sm:text-base">
               Pražská luxusní lokalita
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-4 rounded-2xl border border-[#e9f4e4] bg-[#e9f4e4] p-4 shadow sm:gap-6 lg:p-6">
+        <div className="flex flex-col gap-4 rounded-2xl border border-[#e9f4e4] bg-[#e9f4e4] p-4 shadow sm:gap-6 xl:p-6">
           <div className="relative ml-auto h-10 w-10 rounded-full border border-[#e9f4e4] bg-primary-blue sm:h-14 sm:w-14" />
           <div
             data-svg-wrapper
@@ -340,11 +377,11 @@ export default function Home() {
           >
             {/* TODO svg */}
           </div>
-          <div>
-            <div className="text-xl text-primary-blue sm:text-2xl lg:text-4xl">
+          <div className="flex flex-col gap-2">
+            <div className="text-xl font-semibold text-primary-blue sm:text-2xl xl:text-4xl">
               Výstavba RD
             </div>
-            <div className="text-sm text-primary-blue sm:text-base lg:text-lg">
+            <div className="text-sm font-medium text-primary-blue sm:text-base xl:text-lg">
               Poslední v této lokalitě
             </div>
           </div>
@@ -352,9 +389,9 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto grid items-center justify-between gap-8 px-4 sm:gap-10 sm:px-6 lg:grid-cols-2">
-        <div className="flex flex-col gap-6 sm:gap-10">
+        <div className="flex flex-col gap-4 lg:gap-10">
           <div className="text-3xl font-bold leading-[1.5] md:text-4xl">
-            <span className="text-primary-blue-light">Srdce</span>
+            <span className="text-primary-green-light">Srdce</span>
             <span className="text-primary-blue">
               {" "}
               pražské Troji
@@ -362,7 +399,7 @@ export default function Home() {
             </span>
             <span className="text-primary-blue-light">.</span>
           </div>
-          <div className="text-base text-muted-foreground sm:text-lg md:text-xl">
+          <div className="text-base text-muted-foreground lg:text-lg xl:text-xl">
             V místě, kde se setkává barokní krása Trojského zámku a přesto
             pouhých deset minut od pulzující metropole, objevíte klenot mezi
             pražskými pozemky.
@@ -390,8 +427,8 @@ export default function Home() {
         />
       </section>
 
-      <section className="container mx-auto grid items-center justify-between gap-8 px-4 sm:gap-10 sm:px-6 lg:grid-cols-2">
-        <div className="grid gap-4 lg:gap-8">
+      <section className="container mx-auto grid items-center gap-8 px-4 sm:gap-10 sm:px-6 lg:grid-cols-2 lg:justify-between">
+        <div className="flex flex-col gap-4 lg:gap-8">
           <div className="text-center text-3xl font-medium text-primary-blue sm:text-4xl md:text-5xl">
             Centrum na dosah
             <span className="text-primary-blue-light">.</span>
@@ -402,7 +439,7 @@ export default function Home() {
             alt=""
           />
         </div>
-        <div className="grid gap-4 lg:gap-8">
+        <div className="flex flex-col gap-4 lg:gap-8">
           <div className="text-center text-3xl font-medium text-primary-blue sm:text-4xl md:text-5xl">
             Božský klid
             <span className="text-primary-blue-light">.</span>
@@ -415,9 +452,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col justify-center bg-primary-blue px-4 py-10 text-center sm:py-16 lg:gap-16">
-        <div className="grid gap-4 sm:gap-6">
-          <div className="text-3xl sm:text-4xl md:text-5xl">
+      <section className="relative flex flex-col justify-center bg-gradient-to-b from-primary-blue to-primary-blue-light px-4 py-10 text-center sm:py-16 lg:gap-16">
+        <Image
+          src={ThumbUp}
+          alt="ThumbUp"
+          className="absolute left-0 top-1/4 size-44 w-auto"
+        />
+        <Image
+          src={ThumbUp}
+          alt="ThumbUp"
+          className="absolute bottom-1/4 right-0 size-44 w-auto"
+          style={{ transform: "scaleX(-1)" }}
+        />
+        <Image
+          src={Elipse}
+          alt="Elipse"
+          className="absolute bottom-0 left-0 aspect-square h-auto w-1/3 rotate-90"
+        />
+        <Image
+          src={Elipse}
+          alt="Elipse"
+          className="absolute right-0 top-0 aspect-square h-auto w-1/3 -rotate-90"
+        />
+        <div className="relative grid gap-4 sm:gap-6">
+          <div className="text-3xl font-bold sm:text-4xl md:text-5xl">
             <span className="text-white">5 000</span>
             <span className="text-[#b4d6a5]">+</span>
             <span className="text-white"> spokojených klientů</span>
@@ -428,7 +486,7 @@ export default function Home() {
             přístup. Vaše důvěra nás motivuje být stále lepšími.
           </div>
         </div>
-        <div className="mt-8 grid grid-cols-3 items-end justify-items-center gap-2 self-center sm:gap-4 lg:gap-10">
+        <div className="z-10 mt-8 grid grid-cols-3 items-end justify-items-center gap-2 self-center sm:gap-4 lg:gap-10">
           <img
             src="https://placehold.jp/290x510.png"
             className="max-h-[300px] rounded-2xl border-[3px] border-transparent sm:max-h-[460px]"
@@ -445,7 +503,10 @@ export default function Home() {
             alt=""
           />
         </div>
-        <a href="#" className="mt-6 sm:mt-8">
+        <a
+          href="https://www.firmy.cz/detail/13625165#hodnoceni"
+          className="mt-6 sm:mt-8"
+        >
           <div className="text-base text-white sm:text-lg">
             Prohlédnout všechny reference
           </div>
@@ -477,13 +538,20 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto px-4 sm:px-6">
-        <div className="grid w-full gap-8 rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-6 sm:gap-10 md:p-12 lg:grid-cols-2">
-          <div className="flex flex-1 flex-col justify-between gap-6 text-white">
+        <div className="relative grid w-full gap-8 overflow-hidden rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-6 sm:gap-10 md:p-12 lg:grid-cols-2">
+          <div className="absolute -right-1/4 bottom-1/2 h-1/2 lg:bottom-0 lg:left-[21%] lg:right-0 lg:h-full xl:left-[23%]">
+            <Image
+              src={Salesman}
+              className="h-full w-auto"
+              alt="Frantisek Šťastník"
+            />
+          </div>
+          <div className="relative flex flex-1 flex-col justify-between gap-6 text-white">
             <div>
               <div className="text-base uppercase text-[#b4d6a5] sm:text-lg md:text-xl">
                 Váš realitní makléř
               </div>
-              <div className="text-2xl text-white sm:text-3xl md:text-5xl xl:text-7xl">
+              <div className="text-2xl font-bold !leading-tight text-white sm:text-3xl md:text-5xl xl:text-6xl">
                 Bc. František <br className="hidden md:block" />
                 Šťastník<span className="text-[#b4d6a5]">.</span>
               </div>
@@ -527,28 +595,29 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="flex flex-col gap-6 rounded-2xl bg-white p-4 text-primary-blue shadow-md sm:p-6 lg:p-8">
+          <div className="relative flex flex-col gap-6 rounded-2xl bg-white p-4 text-primary-blue shadow-md max-sm:-mx-6 max-sm:border max-sm:border-primary-blue sm:p-6 lg:p-8">
             <h3 className="text-2xl font-bold text-primary-blue sm:text-3xl lg:text-5xl">
               Kontaktujte mě.
             </h3>
             <input
               type="text"
               placeholder="Jméno Příjmení"
-              className="border-b p-2 text-primary-blue placeholder-[#757575] outline-none"
+              className="border-b-2 border-b-primary-green-light p-2 text-primary-blue placeholder-[#757575] outline-none"
             />
             <input
               type="text"
               placeholder="Telefonní číslo"
-              className="border-b p-2 outline-none"
+              className="border-b-2 border-b-primary-green-light p-2 text-primary-blue placeholder-[#757575] outline-none"
             />
             <input
               type="email"
               placeholder="E-mail"
-              className="border-b p-2 outline-none"
+              className="border-b-2 border-b-primary-green-light p-2 text-primary-blue placeholder-[#757575] outline-none"
             />
             <textarea
-              placeholder="Vaše zpráva"
-              className="min-h-[100px] rounded-lg border p-2 outline-none"
+              placeholder="Vaše zpráva..."
+              rows={6}
+              className="rounded-lg border-2 border-primary-green-light p-2 placeholder-[#757575] outline-none"
             ></textarea>
             <div className="self-center">
               <Btn
@@ -567,7 +636,7 @@ export default function Home() {
       <footer className="bg-primary-blue py-4">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="my-8 grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-            <div className="space-y-4 text-white md:col-span-3">
+            <div className="space-y-4 text-white md:col-span-3 lg:col-span-2">
               <a href="https://www.investujdopole.cz/">
                 <Image
                   src={LogoLight}

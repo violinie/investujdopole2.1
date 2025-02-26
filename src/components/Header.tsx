@@ -37,6 +37,7 @@ export default function Header() {
           href="/"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
         >
           <Image
             src={Logo}
@@ -51,6 +52,7 @@ export default function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
             className={cn(
               "z-30 flex w-full flex-col items-center gap-4 bg-white p-6 max-lg:absolute max-lg:left-0 max-lg:top-full max-lg:rounded-lg max-lg:shadow-xl lg:flex-row",
               {

@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import { Noto_Sans } from "next/font/google";
 
 const noto_sans = Noto_Sans({
-  subsets: ["latin"],
+  subsets: ["latin-ext"],
   variable: "--font-noto-sans",
 });
 
