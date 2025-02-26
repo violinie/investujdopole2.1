@@ -539,7 +539,7 @@ export default function Home() {
 
       <section className="container mx-auto px-4 sm:px-6">
         <div className="relative grid w-full gap-8 overflow-hidden rounded-2xl bg-gradient-to-b from-primary-blue to-primary-blue-light p-6 sm:gap-10 md:p-12 lg:grid-cols-2">
-          <div className="absolute -right-1/4 bottom-1/2 h-1/2 lg:bottom-0 lg:left-[21%] lg:right-0 lg:h-full xl:left-[23%]">
+          <div className="absolute -right-[15%] sm:right-0 bottom-1/2 h-1/2 lg:bottom-0 lg:left-[21%] lg:right-0 lg:h-full xl:left-[23%]">
             <Image
               src={Salesman}
               className="h-full w-auto"
